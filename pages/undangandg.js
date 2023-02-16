@@ -6,7 +6,6 @@ export default function Home() {
     return (
         <div>
             <div className='bg-dark'>
-
                 <Kost />
                 <div className="fixed-bottom ">
                     <div className="text-center form-group pt-5">
