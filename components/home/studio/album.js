@@ -18,11 +18,11 @@ export default function Home() {
     let studio = data['message']
     return (
         <section id="gallery" className="gallery">
-            <div className="container" data-aos="fade-up">
+            {/* <div className="container" data-aos="fade-up">
                 <div className="section-title">
                     <h2>ARYO-S STUDIO</h2>
                 </div>
-            </div>
+            </div> */}
             <div className="container-fluid" data-aos="fade-up" data-aos-delay={100}>
                 <div className="row col-lg-12">
                     {studio.length === 0 ? (

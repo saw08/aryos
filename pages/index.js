@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <div>
-      <div className='bg-black'>
+      <div className='bg-black ' >
         {/* ======= Hero Section ======= */}
         {/* <section id="hero" className="d-flex align-items-center ">
           <div className="container text-lg-start mb-5 mt-5"   >
@@ -17,22 +17,33 @@ export default function Home() {
         <div className=''><a href="/">
           <img src="./DEPAN-r-2.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/">
+        <div className="d-flex justify-content-center">
+          <div className='col-3'><a href="/">
+            <img src="./IG.png" className="img-fluid" alt="..." /></a>
+          </div>
+          <div className='col-3'><a href="/">
+            <img src="./YOUTUBE.png" className="img-fluid" alt="..." /></a>
+          </div>
+          <div className='col-3'><a href="/">
+            <img src="./MAPS.png" className="img-fluid" alt="..." /></a>
+          </div>
+        </div>
+        <div className=''><a href="/weding">
           <img src="./WEDDING-&-PREWEDDING.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/">
           <img src="./STUDIO-UTAMA.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/">
+        <div className=''><a href="/selfstudio">
           <img src="./SELF-STUDIO.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/">
           <img src="./UNDANGAN-DIGITAL.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/">
+        <div className=''><a href="/tenda">
           <img src="./ARYOS-TENDA.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/">
+        <div className=''><a href="/kost">
           <img src="./ARYOS-KOST.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/">
@@ -40,6 +51,9 @@ export default function Home() {
         </div>
         <div className=''><a href="/">
           <img src="./alamat-lengkap.jpg" className="img-fluid" alt="..." /></a>
+        </div>
+        <div className=''>
+          <img src="./bg-bawa.jpg" className="img-fluid" alt="..." />
         </div>
         {/* <div className='container'>
         <div className='d-grid gap-2 col-md-8 col-lg-6 mx-auto text-center'>

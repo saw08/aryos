@@ -2,7 +2,7 @@
 import useSWR from 'swr'
 import { useState } from 'react'
 import moment from "moment";
-import Kost from '../components/home/kost/album'
+import Kost from '../components/home/studio/album'
 
 
 export default function Home() {
@@ -67,10 +67,10 @@ export default function Home() {
 
     return (
         <div>
-            <div className='bg-dark'>
+            <div className=''>
 
-                <div className='text-center'><a href="/">
-                    <img src="./SELF.png" height={200} alt="..." /></a>
+                <div className=''>
+                    <img src="./layar-ke-2.jpg" className="img-fluid" alt="..." />
                 </div>
 
                 <Kost />
