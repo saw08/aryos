@@ -24,7 +24,16 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-studio" >
                                                     <div className="section-title">
-                                                        <p style={{ fontSize: '22px' }}>Studio</p>
+                                                        <p style={{ fontSize: '22px' }}>Self Studio</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className='p-2 col-lg-4 '>
+                                            <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
+                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tabah-studiou" >
+                                                    <div className="section-title">
+                                                        <p style={{ fontSize: '22px' }}>Studio Utama</p>
                                                     </div>
                                                 </a>
                                             </div>
@@ -49,7 +58,7 @@ export default function Homeadmin() {
                                         </div>
                                         <div className='p-2 col-lg-4 '>
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
-                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/data-tenda" >
+                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-tenda" >
                                                     <div className="section-title">
                                                         <p style={{ fontSize: '22px' }}>Tenda</p>
                                                     </div>

@@ -17,40 +17,42 @@ export default function Home() {
         <div className=''><a href="/">
           <img src="./DEPAN-r-2.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className="d-flex justify-content-center">
+        <div className=" d-flex justify-content-center">
+          <div className="row col-6  justify-content-center">
           <div className='col-3'><a href="/">
-            <img src="./IG.png" className="img-fluid" alt="..." /></a>
+              <img src="./IG.jpg" className="img-fluid" alt="..." /></a>
           </div>
           <div className='col-3'><a href="/">
-            <img src="./YOUTUBE.png" className="img-fluid" alt="..." /></a>
+              <img src="./YTB.jpg" className="img-fluid" alt="..." /></a>
           </div>
           <div className='col-3'><a href="/">
-            <img src="./MAPS.png" className="img-fluid" alt="..." /></a>
+              <img src="./MAPS.jpg" className="img-fluid" alt="..." /></a>
+            </div>
           </div>
         </div>
         <div className=''><a href="/weding">
-          <img src="./WEDDING-&-PREWEDDING.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./wedding.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/">
-          <img src="./STUDIO-UTAMA.jpg" className="img-fluid" alt="..." /></a>
+        <div className=''><a href="/studioutama">
+          <img src="./studio-utama.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/selfstudio">
-          <img src="./SELF-STUDIO.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./self-studio.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/">
-          <img src="./UNDANGAN-DIGITAL.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./undangan.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/tenda">
-          <img src="./ARYOS-TENDA.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./aryos-tenda.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/kost">
-          <img src="./ARYOS-KOST.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./kost.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/">
-          <img src="./OFICIL-WEB.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./website.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/">
-          <img src="./alamat-lengkap.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./alamat.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''>
           <img src="./bg-bawa.jpg" className="img-fluid" alt="..." />

@@ -12,9 +12,9 @@ function navbarAdmin() {
                     <img
                         className='logo me-auto me-lg-0'
                         alt=""
-                        src="/logo.png"
-                        width="50"
-                        height="50"
+                        src="/ARYOS.png"
+                        width="100"
+                        height="100"
                     />{'  '}
                     {/* <h4 className='text-white text-start p-2'>Warung kemarang</h4> */}
                 </Navbar.Brand>
@@ -22,13 +22,16 @@ function navbarAdmin() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="navbar-header " >
                         <Nav.Link className='nav-link scrollto' href="../">
-                            <h4 className='text-white text-center'><u>Warung kemarang</u></h4>
+                            <h4 className='text-white text-center'><u>ADMIN ARYOS GRIP</u></h4>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/home">
                             <h5 className='text-white text-start'>Home</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-weding">
                             <h5 className='text-white text-start'>Weding</h5>
+                        </Nav.Link>
+                        <Nav.Link className='nav-link scrollto' href="../admin/tambah-studiou">
+                            <h5 className='text-white text-start'>Studio Utama</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-studio">
                             <h5 className='text-white text-start'>Studio</h5>
@@ -37,7 +40,7 @@ function navbarAdmin() {
                             <h5 className='text-white text-start'>Tenda</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-kost">
-                            <h5 className='text-white text-start'>KOst</h5>
+                            <h5 className='text-white text-start'>Kost</h5>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

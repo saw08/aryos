@@ -79,7 +79,7 @@ export default function Album() {
             <section id="events" className="events">
                 <div className="container" >
                     <div className="section-title">
-                        <h2>STUDIO ARYO'S</h2>
+                        <h2>SELF STUDIO ARYO'S</h2>
                     </div>
                     <form onSubmit={handlePost} >
                         <div className=" col-lg-12">
