@@ -19,13 +19,13 @@ export default function Home() {
         </div>
         <div className=" d-flex justify-content-center">
           <div className="row col-6  justify-content-center">
-          <div className='col-3'><a href="/">
+            <div className='col-3'><a href="https://instagram.com/aryos_studio">
               <img src="./IG.jpg" className="img-fluid" alt="..." /></a>
           </div>
-          <div className='col-3'><a href="/">
+            <div className='col-3'><a href="https://youtube.com/@aryosstudio3756">
               <img src="./YTB.jpg" className="img-fluid" alt="..." /></a>
           </div>
-          <div className='col-3'><a href="/">
+            <div className='col-3'><a href="https://goo.gl/maps/siC5iBXaHCNcSHvM9">
               <img src="./MAPS.jpg" className="img-fluid" alt="..." /></a>
             </div>
           </div>

@@ -8,7 +8,7 @@ export default function Home() {
             <div className='bg-dark'>
 
                 <div className='text-center'><a href="/">
-                    <img src="./kost.png" height={200} alt="..." /></a>
+                    <img src="./ARYOS-KOST-KE-2.jpg" height={200} alt="..." /></a>
                 </div>
 
                 <Kost />

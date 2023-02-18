@@ -7,7 +7,7 @@ export default function Home() {
         <div>
             <div className='bg-dark'>
                 <div className='text-center'><a href="/">
-                    <img src="./tenda.png" height={200} alt="..." /></a>
+                    <img src="./ARYOS-TENDAKE-2.jpg" height={200} alt="..." /></a>
                 </div>
                 <Kost />
                 <div className="position-static pb-4 ">

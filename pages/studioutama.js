@@ -33,7 +33,7 @@ export default function Home() {
 
     let nextDay = moment(dateDate, "DD/MM/YYYY").add(1, 'days').format('YYYY-MM-DD')
 
-    let jamTersedia = ['08.00-09.00', '09.00-10.00', '11.00-12.00', '13.00-14.00', '15.00-16.00', '17.00-18.00', '19.00-20.00', '21.00-22.00', '22.00-23.00']
+    let jamTersedia = ['08.00', '09.00', '10.00', '11.00', '12.00', '13.00', '14.00', '15.00', '16.00', '17.00', '18.00', '19.00', '20.00', '21.00', '22.00']
 
 
     const setChange = (e, jadwal) => {
@@ -70,7 +70,7 @@ export default function Home() {
             <div className=''>
 
                 <div className=''>
-                    <img src="./layar-ke-2.jpg" className="img-fluid" alt="..." />
+                    <img src="./STUDIO-UTAMA-KE-2.jpg" className="img-fluid" alt="..." />
                 </div>
 
                 <Kost />
