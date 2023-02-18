@@ -2,7 +2,7 @@
 import useSWR from 'swr'
 import { useState } from 'react'
 import moment from "moment";
-import Kost from '../components/home/studio/album'
+import Kost from '../components/home/studiou/album'
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
     const [paketpesan, setPaketpesan] = useState([]);
     const [isCheck, setIsCheck] = useState(true);
     const fetcher = (...args) => fetch(...args).then((res) => res.json())
-    const { data: data, error } = useSWR('/api/db_studio', fetcher, { refreshInterval: 1000 })
+    const { data: data, error } = useSWR('/api/db_studiou', fetcher, { refreshInterval: 1000 })
 
     if (!data) {
         return <div className="spinner"></div>
