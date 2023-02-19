@@ -5,7 +5,7 @@ import Kost from '../components/home/kost/album'
 export default function Home() {
     return (
         <div>
-            <div className='bg-dark'>
+            <div className=''>
                 <Kost />
                 <div className="fixed-bottom ">
                     <div className="text-center form-group pt-5">

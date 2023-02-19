@@ -34,16 +34,16 @@ export default function Home() {
           <img src="./wedding.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/studioutama">
-          <img src="./studio-utama.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./studioutama.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/selfstudio">
-          <img src="./self-studio.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./selfstudio.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/">
           <img src="./undangan.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/tenda">
-          <img src="./aryos-tenda.jpg" className="img-fluid" alt="..." /></a>
+          <img src="./aryostenda.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/kost">
           <img src="./kost.jpg" className="img-fluid" alt="..." /></a>

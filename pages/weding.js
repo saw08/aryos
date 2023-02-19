@@ -5,9 +5,9 @@ import Kost from '../components/home/weding/album'
 export default function Home() {
     return (
         <div>
-            <div className='bg-dark'>
+            <div className=''>
                 <div className='text-center'><a href="/">
-                    <img src="./ARYOS.png" height={200}  alt="..." /></a>
+                    <img src="./layar-ke-2.jpg" height={200}  alt="..." /></a>
                 </div>
                 <Kost />
                 <div className=" fixed-bottom mb-5 ">

@@ -5,7 +5,7 @@ import Kost from '../components/home/kost/album'
 export default function Home() {
     return (
         <div>
-            <div className='bg-dark'>
+            <div className=''>
                 <div className='text-center'><a href="/">
                     <img src="./ARYOS-TENDAKE-2.jpg" height={200} alt="..." /></a>
                 </div>

@@ -12,6 +12,8 @@ export default function Home() {
     const [tglPesan, setTglPesan] = useState('');
     const [jadwalPesan, setJadwalPesan] = useState([]);
     const [paketpesan, setPaketpesan] = useState([]);
+    const [catatan, setCatatan] = useState([]);
+    const [begrond, setBegrond] = useState([]);
     const [isCheck, setIsCheck] = useState(true);
     const fetcher = (...args) => fetch(...args).then((res) => res.json())
     const { data: data, error } = useSWR('/api/db_studio', fetcher, { refreshInterval: 1000 })
@@ -59,8 +61,8 @@ export default function Home() {
 
     }
     const pesanWhatsapp = async (e) => {
-
-        let text = `[nama : "${nama}"]  [email : "${email}"]  [No.hp : "${noTelp}"]   [Tgl : "${tglPesan}"]   [estimasi waktu : "${jadwalPesan}"]    [Paket: "${paketpesan}"]`
+        document.write("\n");
+        let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0ABackground : ${begrond}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
         let urlRed = `https://wa.me/+6281353025114?text=${text}`
         document.location.href = urlRed
     }
@@ -69,8 +71,8 @@ export default function Home() {
         <div>
             <div className=''>
 
-                <div className=''>
-                    <img src="./SELF-STUDIO-KE-2.jpg" className="img-fluid" alt="..." />
+                <div className=''><a href='/'>
+                    <img src="./SELF-STUDIO-KE-2.jpg" className="img-fluid" alt="..." /></a>
                 </div>
 
                 <Kost />
@@ -104,6 +106,10 @@ export default function Home() {
                                 <input type="date" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
+                                <label style={{ color: "white" }}>Warna background</label>
+                                <input type="date" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} />
+                            </div>
+                            <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label style={{ color: "white" }}>Estimasi Jam Booking</label>
 
                                 <a className="form-control" data-bs-toggle="collapse" href="#jam" >
@@ -113,7 +119,7 @@ export default function Home() {
 
                                     {jamTersedia.map((data, i) => (
                                         <>
-                                            <div className='col-6 col-lg-3 mb-2' style={{ fontWeight: 500 }}>
+                                            <div className='col-3 col-lg-2 mb-2' style={{ fontWeight: 500 }}>
                                                 <div>
                                                     <input type="checkbox" className="btn-check" id={`btn-${i}`}
                                                         name='jadwal'
@@ -149,51 +155,54 @@ export default function Home() {
                                         </div>
                                     ))}
                                 </div>
+
+                            </div>
+                            <div className="col-lg-10 col-md-10 form-group mt-3">
+                                <label>Catatan</label>
+                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Message" defaultValue={""} />
+                                <div className="validate" />
+                                <hr></hr>
                             </div>
                         </div>
 
+                        <div className='d-flex justify-content-center'>
+                            <div className='row col-11  p-2' style={{ borderStyle: 'solid', borderColor: 'GrayText', borderRadius: '0.4rem' }}>
+                                <table>
+                                    <tr>
+                                        <td><h6 className='text-black'>Nama </h6></td>
+                                        <td><h6 className='text-black'>:{nama}</h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 className='text-black'>No Hp </h6></td>
+                                        <td><h6 className='text-black'>:{noTelp} </h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 className='text-black'>Instagram </h6></td>
+                                        <td><h6 className='text-black'>:{email} </h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 className='text-black'>Tgl Booking </h6></td>
+                                        <td><h6 className='text-black'>:{tglPesan} </h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 className='text-black'>background</h6></td>
+                                        <td><h6 className='text-black'>:{begrond} </h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 className='text-black'>Estimasi Waktu </h6></td>
+                                        <td><h6 className='text-black'>:{jadwalPesan} </h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 className='text-black'>Paket</h6></td>
+                                        <td><h6 className='text-black'>:{paketpesan} </h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 className='text-black'>catatan</h6></td>
+                                        <td><h6 className='text-black'>:{catatan} </h6></td>
+                                    </tr>
+                                </table>
 
-                        <div className='row'>
-                            <h5 className='text-black'>Nama: {nama}</h5>
-                            <h5 className='text-black'>Email: {email}</h5>
-                            <h5 className='text-black'>No. Telp: {noTelp}</h5>
-                            <h5 className='text-black'>Tgl Reservasi: {tglPesan}</h5>
-                            <h5 className='text-black'>Ruangan: </h5>
-                            <h5 className='text-black'>Jam Pesanan</h5>
-                            {jadwalPesan.length === 0 ? (
-                                <h4>Tidak ada data Jadwal yang dipesan</h4>
-                            ) : (
-                                <>
-
-                                    {jadwalPesan.map((data, index) => (
-                                        <div className='col-6 col-sm-3 mb-2'>
-                                            <div className='card'>
-                                                <div className='card-body'>
-                                                    <span>{data}</span><br></br>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </>
-                            )}
-                            <h5 className='text-black'>Paket</h5>
-                            {paketpesan.length === 0 ? (
-                                <h4>Tidak ada data Jadwal yang dipesan</h4>
-                            ) : (
-                                <>
-
-                                    {paketpesan.map((data, index) => (
-                                        <div className='col-6 col-sm-3 mb-2'>
-                                            <div className='card'>
-                                                <div className='card-body'>
-                                                    <span>{data}</span><br></br>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </>
-                            )}
-
+                            </div>
                         </div>
                         <div className="text-center col-lg-10 col-md-10 form-group mt-3 mt-5">
                             <a href="/"> <button className="book-a-table-btn" onClick={pesanWhatsapp}>Boking sekarang</button></a>
