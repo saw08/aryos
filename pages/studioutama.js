@@ -157,7 +157,7 @@ export default function Home() {
                                 <div className="validate" />
                                 <hr></hr>
                             </div>
-                        </div>
+                        
 
                         <div className='d-flex justify-content-center'>
                             <div className='row col-11  p-2' style={{ borderStyle: 'solid', borderColor: 'GrayText', borderRadius: '0.4rem' }}>
@@ -188,6 +188,7 @@ export default function Home() {
                                     </tr>
                                 </table>
 
+                            </div>
                             </div>
                         </div>
                         <div className="text-center col-lg-10 col-md-10 form-group mt-3 mt-5">
