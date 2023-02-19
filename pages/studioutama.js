@@ -159,8 +159,8 @@ export default function Home() {
                             </div>
                         
 
-                        <div className='d-flex justify-content-center'>
-                            <div className='row col-11  p-2' style={{ borderStyle: 'solid', borderColor: 'GrayText', borderRadius: '0.4rem' }}>
+                            <div className='col-lg-10 col-md-10 form-group mt-3'>
+                            <div className='' style={{ borderStyle: 'solid', borderColor: 'GrayText', borderRadius: '0.4rem' }}>
                                 <table>
                                     <tr>
                                         <td><h6 className='text-black'>Nama </h6></td>
