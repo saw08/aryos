@@ -61,7 +61,7 @@ export default function Home() {
 
     }
     const pesanWhatsapp = async (e) => {
-        let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0ANama%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${nama}%0ANo%20hp%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${noTelp}%0AInstagram%20%20%20%20%20%20%20%20%20%3A${email}%0ATgl%20booking%20%20%20%20%20%20%3A${tglPesan}%0AEstimasi%20waktu%20%3A${jadwalPesan}%0APaket%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${pilih}%0ATambahan%20%20%20%20%20%20%20%20%3A${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
+        let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0ANama%20%3A${nama}%0ANo%20hp%20%3A${noTelp}%0AInstagram%20%3A${email}%0ATgl%20booking%20%3A${pilih}%0ATambahan%20%3A${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
         // let text = `Hai kak ARYO'S STUDIO UTAMA, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
         let urlRed = `https://wa.me/+6281353025114?text=${text}`
         document.location.href = urlRed
