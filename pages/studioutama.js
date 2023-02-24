@@ -8,6 +8,7 @@ import Kost from '../components/home/studiou/album'
 export default function Home() {
     const [nama, setNama] = useState('');
     const [email, setEmail] = useState('');
+    const [pilih, setPilih] = useState('');
     const [noTelp, setNoTelp] = useState('');
     const [tglPesan, setTglPesan] = useState('');
     const [jadwalPesan, setJadwalPesan] = useState([]);
@@ -86,26 +87,26 @@ export default function Home() {
                     <form method="post" role="form" className="php-email-form" data-aos="fade-up" data-aos-delay={100}>
                         <div className="row">
                             <div className="col-lg-10 col-md-10 mt-3 form-group">
-                                <label style={{ color: "white" }}>Nama Pemesan</label>
+                                <label  >Nama Pemesan</label>
                                 <input type="text" name="name" className="form-control" placeholder="Nama Pemesan" value={nama} onChange={(e) => setNama(e.target.value)} data-msg="Please enter at least 4 chars" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label style={{ color: "white" }}>Email</label>
+                                <label  >Email</label>
                                 <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
-                                <label style={{ color: "white" }}>Nomor Kontak</label>
-                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} name="phone" id="phone" placeholder="Nomor Telp." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <label  >Nomor Kontak</label>
+                                <input type="number" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} name="phone" id="phone" placeholder="Nomor Telp." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label style={{ color: "white" }}>Tanggal Booking</label>
+                                <label  >Tanggal Booking</label>
                                 <input type="date" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label style={{ color: "white" }}>Estimasi Booking</label>
+                                <label  >Estimasi Jam Booking</label>
 
                                 <a className="form-control" data-bs-toggle="collapse" href="#jam" >
                                     <icon className='fa fa-sort-amount-desc'></icon>&nbsp;PILIH JAM
@@ -114,7 +115,7 @@ export default function Home() {
 
                                     {jamTersedia.map((data, i) => (
                                         <>
-                                            <div className='col-6 col-lg-3 mb-2' style={{ fontWeight: 500 }}>
+                                            <div className='col-3  mb-2' style={{ fontWeight: 500 }}>
                                                 <div>
                                                     <input type="checkbox" className="btn-check" id={`btn-${i}`}
                                                         name='jadwal'
@@ -128,8 +129,8 @@ export default function Home() {
 
                                 </div>
                             </div>
-                            <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label style={{ color: "white" }}>Paket</label>
+                            {/* <div className="col-lg-10 col-md-10 form-group mt-3">
+                                <label  >Paket</label>
 
                                 <a className="form-control" data-bs-toggle="collapse" href="#ruang" >
                                     <icon className='fa fa-sort-amount-desc'></icon>&nbsp;Pilih Paket
@@ -150,9 +151,14 @@ export default function Home() {
                                         </div>
                                     ))}
                                 </div>
+                            </div> */}
+                            <div className="col-lg-10 col-md-10 form-group mt-3">
+                                <label  >Paket Yang Dipilih</label>
+                                <input type="email" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} name="email" id="email" placeholder="paket" data-rule="email" data-msg="Please enter a valid email" />
+                                <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label>Catatan</label>
+                                <label>Tambahan</label>
                                 <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Message" defaultValue={""} />
                                 <div className="validate" />
                                 <hr></hr>
@@ -184,8 +190,12 @@ export default function Home() {
                                     </tr>
                                     <tr>
                                         <td><h6 className='text-black'>Paket</h6></td>
-                                        <td><h6 className='text-black'>:{paketpesan} </h6></td>
+                                        <td><h6 className='text-black'>:{pilih} </h6></td>
                                     </tr>
+                                        <tr>
+                                            <td><h6 className='text-black'>catatan</h6></td>
+                                            <td><h6 className='text-black'>:{catatan} </h6></td>
+                                        </tr>
                                 </table>
 
                             </div>
