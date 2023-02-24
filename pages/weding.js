@@ -7,16 +7,11 @@ export default function Home() {
         <div>
             <div className=''>
                 <div className='text-center'><a href="/">
-                    <img src="./layar-ke-2.jpg" height={200}  alt="..." /></a>
+                    <img src="./layar-ke-2.jpg" className="img-fluid" alt="..." /></a>
                 </div>
                 <Kost />
-                <div className=" fixed-bottom mb-5 ">
-                    <div className="text-center form-group pt-5">
-                        <a href='/pesan' type='btn' className='btn-rs ' style={{ textDecoration: 'none', color: 'white' }}>
-                            <b style={{ marginTop: '3px' }}>Boking...</b>
-                            <i className="fa fa-hand-o-right" style={{ fontSize: '22px', paddingLeft: '1px' }} />
-                        </a>
-                    </div>
+                <div className="text-center col-lg-10 col-md-10 form-group mt-3 p-4">
+                    <a href="/"> <button className="book-a-table-btn" >Boking sekarang</button></a>
                 </div>
             </div>
 

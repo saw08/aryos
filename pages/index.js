@@ -41,10 +41,10 @@ export default function Home() {
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                   </div>
                   <div className="modal-body">
-                    <div><a href="https://instagram.com/aryos_studio"><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos_studio</a></div>
-                    <div><a href="https://instagram.com/aryos.selfstudio"><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos.selfstudio</a></div>
-                    <div><a href="https://instagram.com/aryos.tenda"><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos.tenda</a></div>
-                    <div><a href="https://instagram.com/kost.kostan_aryos"><img src="./IG.png" className="img-fluid" width={50} alt="..." />kost.kostan_aryos</a></div>
+                    <div><a href="https://instagram.com/aryos_studio" style={{color: 'inherit',textDecoration: 'none'}}><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos_studio</a></div>
+                    <div><a href="https://instagram.com/aryos.selfstudio" style={{ color: 'inherit', textDecoration: 'none' }}><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos.selfstudio</a></div>
+                    <div><a href="https://instagram.com/aryos.tenda" style={{ color: 'inherit', textDecoration: 'none' }}><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos.tenda</a></div>
+                    <div><a href="https://instagram.com/kost.kostan_aryos" style={{ color: 'inherit', textDecoration: 'none' }}><img src="./IG.png" className="img-fluid" width={50} alt="..." />kost.kostan_aryos</a></div>
                   </div>
                 </div>
               </div>

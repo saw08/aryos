@@ -65,7 +65,7 @@ export default function Home() {
     const pesanWhatsapp = async (e) => {
         document.write("\n");
         // let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0ABackground : ${begrond}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
-        let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0ANama%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${nama}%0ANo%20Hp%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${noTelp}%0AInstagram%20%20%20%20%20%20%20%20%20%3A${email}%0ATgl%20Booking%20%20%20%20%20%20%20%3A${tglPesan}%0AEstimasi%20Waktu%20%3A${jadwalPesan}%0APaket%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${pilih}%0ABackground%20%20%20%20%20%3A${begrond}%0ATambahan%20%20%20%20%20%20%20%20%20%3A${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
+        let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0ANama%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${nama}%0ANo%20hp%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${noTelp}%0AInstagram%20%20%20%20%20%20%20%20%20%3A${email}%0ATgl%20booking%20%20%20%20%20%20%3A${tglPesan}%0AEstimasi%20waktu%20%3A${jadwalPesan}%0APaket%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${pilih}%0ABackground%20%20%20%20%20%3A${begrond}%0ATambahan%20%20%20%20%20%20%20%20%3A${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
         let urlRed = `https://wa.me/+6281353025114?text=${text}`
         document.location.href = urlRed
     }
@@ -96,12 +96,12 @@ export default function Home() {
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Instagram</label>
-                                <input type="text" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <input type="text" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="instagram" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
                                 <label  >Nomor Kontak</label>
-                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} name="phone" id="phone" placeholder="Nomor Telp." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} placeholder="08****" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
@@ -159,16 +159,16 @@ export default function Home() {
                             </div> */}
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
                                 <label  >Paket Yang Dipilih</label>
-                                <input type="text" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} name="phone" id="phone" placeholder="Nomor Telp." data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <input type="text" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} placeholder="paket" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Warna background</label>
-                                <input type="text" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} />
+                                <input type="text" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} placeholder="warna" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label>Tambahan</label>
-                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Message" defaultValue={""} />
+                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="tambahan" defaultValue={""} />
                                 <div className="validate" />
                                 <hr></hr>
                             </div>
