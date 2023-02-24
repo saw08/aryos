@@ -3,6 +3,8 @@ import useSWR from 'swr'
 import { useState } from 'react'
 import moment from "moment";
 import Kost from '../components/home/studio/album'
+import '../styles/globals.css'
+import '../styles/style.css'
 
 
 export default function Home() {
