@@ -20,16 +20,7 @@ a:hover {
   color: #d9ba85;
   text-decoration: none;
 }
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 
-  body {
-    color: white;
-    background: black;
-  }
-}
 h1,
 h2,
 h3,

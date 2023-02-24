@@ -15,7 +15,6 @@ const Layout = ({ children }) => {
             </Helmet>
             <Head>
 
-
                 <meta charSet="utf-8" />
                 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
                 <title>ARYO'S</title>

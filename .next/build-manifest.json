@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/selfstudio": [
+    "/studioutama": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/selfstudio.js"
+      "static/chunks/pages/studioutama.js"
     ]
   },
   "ampFirstPages": []
