@@ -22,25 +22,25 @@ function navbarAdmin() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="navbar-header " >
                         <Nav.Link className='nav-link scrollto' href="../">
-                            <h4 className='text-white text-center'><u>ADMIN ARYOS GRIP</u></h4>
+                            <h4 className='text-white text-center'><u>ADMIN ARYOS GRUP</u></h4>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/home">
                             <h5 className='text-white text-start'>Home</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-weding">
-                            <h5 className='text-white text-start'>Weding</h5>
+                            <h5 className='text-white text-start'>Weding & Praweding</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-studiou">
                             <h5 className='text-white text-start'>Studio Utama</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-studio">
-                            <h5 className='text-white text-start'>Studio</h5>
+                            <h5 className='text-white text-start'>Self Studio</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-Tenda">
-                            <h5 className='text-white text-start'>Tenda</h5>
+                            <h5 className='text-white text-start'>Aryo's Tenda</h5>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/tambah-kost">
-                            <h5 className='text-white text-start'>Kost</h5>
+                            <h5 className='text-white text-start'>Aryo's Kost</h5>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
