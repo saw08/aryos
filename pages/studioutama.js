@@ -102,7 +102,7 @@ export default function Home() {
                                 <input type="number" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)}  placeholder="Nomor Telp." />
                                 <div className="validate" />
                             </div>
-                            <div className="col-lg-10 col-md-10 form-group mt-3">
+                            <div className="col-lg-10 col-md-10 form-group mt-3 text-dark">
                                 <label  >Tanggal Booking</label>
                                 <input type="date" className="form-control" style={{ color: 'black'}} value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
                             </div>
