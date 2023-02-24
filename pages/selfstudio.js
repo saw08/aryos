@@ -61,9 +61,11 @@ export default function Home() {
         console.log(jadwalPesan)
 
     }
+
     const pesanWhatsapp = async (e) => {
         document.write("\n");
-        let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0ABackground : ${begrond}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
+        // let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0ABackground : ${begrond}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
+        let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0ANama%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${nama}%0ANo%20Hp%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${noTelp}%0AInstagram%20%20%20%20%20%20%20%20%20%3A${email}%0ATgl%20Booking%20%20%20%20%20%20%20%3A${tglPesan}%0AEstimasi%20Waktu%20%3A${jadwalPesan}%0APaket%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3A${pilih}%0ABackground%20%20%20%20%20%3A${begrond}%0ATambahan%20%20%20%20%20%20%20%20%20%3A${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
         let urlRed = `https://wa.me/+6281353025114?text=${text}`
         document.location.href = urlRed
     }
@@ -93,8 +95,8 @@ export default function Home() {
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label  >Email</label>
-                                <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <label  >Instagram</label>
+                                <input type="text" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
@@ -165,7 +167,7 @@ export default function Home() {
                                 <input type="text" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label>Catatan</label>
+                                <label>Tambahan</label>
                                 <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Message" defaultValue={""} />
                                 <div className="validate" />
                                 <hr></hr>

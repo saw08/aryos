@@ -2,6 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/selfstudio": "pages/selfstudio.js",
-  "/api/db_studio": "pages/api/db_studio.js"
+  "/selfstudio": "pages/selfstudio.js"
 }
