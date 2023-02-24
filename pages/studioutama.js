@@ -3,8 +3,6 @@ import useSWR from 'swr'
 import { useState } from 'react'
 import moment from "moment";
 import Kost from '../components/home/studiou/album'
-import '../styles/globals.css'
-import '../styles/style.css'
 
 
 
@@ -106,7 +104,7 @@ export default function Home() {
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Tanggal Booking</label>
-                                <input type="date" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
+                                <input type="date" className="form-control" style={{ color: 'black'}} value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Estimasi Jam Booking</label>
