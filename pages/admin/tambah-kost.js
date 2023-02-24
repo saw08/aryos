@@ -91,7 +91,7 @@ export default function Album() {
                             
                             
                             <div className="text-center col-lg-6 col-md-10 form-group mt-3 mt-5">
-                                <button className="book-a-table-btn" type="submit" disabled={uploading === false ? (false) : (true)}>Tambah Album</button>
+                                <button className="book-a-table-btn" type="submit" disabled={uploading === false ? (false) : (true)}>Tambahkan</button>
                                 <div className="text-center col-lg-6 col-md-10">
                                 {uploading &&
                                     <>

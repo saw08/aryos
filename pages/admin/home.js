@@ -31,7 +31,7 @@ export default function Homeadmin() {
                                         </div>
                                         <div className='p-2 col-lg-4 '>
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
-                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tabah-studiou" >
+                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-studiou" >
                                                     <div className="section-title">
                                                         <p style={{ fontSize: '22px' }}>Studio Utama</p>
                                                     </div>
