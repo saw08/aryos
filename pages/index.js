@@ -19,8 +19,8 @@ export default function Home() {
         </div>
         <div className=" d-flex justify-content-center">
           <div className="row col-6  justify-content-center">
-            <div className='col-3'><a href="https://instagram.com/aryos_studio">
-              <img src="./IG.jpg" className="img-fluid" alt="..." /></a>
+            <div className='col-3' data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img src="./IG.jpg" className="img-fluid" alt="..." />
           </div>
             <div className='col-3'><a href="https://youtube.com/@aryosstudio3756">
               <img src="./YTB.jpg" className="img-fluid" alt="..." /></a>
@@ -29,6 +29,28 @@ export default function Home() {
               <img src="./MAPS.jpg" className="img-fluid" alt="..." /></a>
             </div>
           </div>
+          <div>
+            {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Launch demo modal
+            </button> */}
+            <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h1 className="modal-title fs-5" id="exampleModalLabel">Instagram</h1>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                  </div>
+                  <div className="modal-body">
+                    <div><a href="https://instagram.com/aryos_studio"><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos_studio</a></div>
+                    <div><a href="https://instagram.com/aryos.selfstudio"><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos.selfstudio</a></div>
+                    <div><a href="https://instagram.com/aryos.tenda"><img src="./IG.png" className="img-fluid" width={50} alt="..." />aryos.tenda</a></div>
+                    <div><a href="https://instagram.com/kost.kostan_aryos"><img src="./IG.png" className="img-fluid" width={50} alt="..." />kost.kostan_aryos</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div className=''><a href="/weding">
           <img src="./wedding.jpg" className="img-fluid" alt="..." /></a>
@@ -51,7 +73,7 @@ export default function Home() {
         <div className=''><a href="/">
           <img src="./website.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/">
+        <div className=''><a href="https://goo.gl/maps/siC5iBXaHCNcSHvM9">
           <img src="./alamat.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''>
