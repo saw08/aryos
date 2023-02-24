@@ -106,7 +106,7 @@ export default function Home() {
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Tanggal Booking</label>
-                                <input type="date" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
+                                <input  type="date" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
                             </div>
                             
                             <div className="col-lg-10 col-md-10 form-group mt-3">
