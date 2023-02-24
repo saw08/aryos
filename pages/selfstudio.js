@@ -101,12 +101,12 @@ export default function Home() {
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
                                 <label  >Nomor Kontak</label>
-                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} placeholder="08****" />
+                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} placeholder="Nomor Telp." />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 text-dark">
                                 <label  >Tanggal Booking</label>
-                                <input type="date" style={{ colorScheme: 'dark', color: 'black', backgroundColor: 'white' }} className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
+                                <input type="date" style={{ colorScheme: 'dark', color: 'black', backgroundColor: 'white' }} placeholder="dd/mm/yyyy" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
                             </div>
                             
                             <div className="col-lg-10 col-md-10 form-group mt-3">
