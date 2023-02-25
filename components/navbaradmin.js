@@ -22,7 +22,7 @@ function navbarAdmin() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="navbar-header " >
                         <Nav.Link className='nav-link scrollto' href="../admin/home" style={{ textDecoration: 'none', borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
-                            <h4 className='text-white text-center' ><u>ADMIN ARYOS GRUP</u></h4>
+                            <h4 className='text-white text-center' >ADMIN ARYOS GRUP</h4>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/home">
                             <h5 className='text-white text-start'>Home</h5>
