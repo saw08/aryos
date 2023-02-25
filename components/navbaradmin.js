@@ -21,7 +21,7 @@ function navbarAdmin() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="navbar-header " >
-                        <Nav.Link className='nav-link scrollto' href="../admin/home" style={{ textDecoration: 'none', borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
+                        <Nav.Link className='nav-link scrollto' href="../admin/home" style={{ textDecoration: 'none', borderStyle: 'solid', borderColor: '#a06f3c', borderRadius: '0.3rem' }}>
                             <h4 className='text-white text-center' >ADMIN ARYOS GRUP</h4>
                         </Nav.Link>
                         <Nav.Link className='nav-link scrollto' href="../admin/home">
