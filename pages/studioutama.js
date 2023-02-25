@@ -110,7 +110,7 @@ export default function Home() {
                                 <label  >Estimasi Jam Booking</label>
 
                                 <a className="form-control" data-bs-toggle="collapse" href="#jam" >
-                                    <icon className='fa fa-sort-amount-desc'></icon>&nbsp;PILIH JAM
+                                    <icon className='fa fa-sort-amount-desc'></icon>&nbsp;pilih jam
                                 </a>
                                 <div className="row collapse multi-collapse text-start mt-4" id="jam">
 
@@ -171,31 +171,31 @@ export default function Home() {
                                 <table>
                                     <tr>
                                         <td><h6 className='text-black'>Nama </h6></td>
-                                        <td><h6 className='text-black'>:{nama}</h6></td>
+                                            <td><h6 className='text-black'>:<strong>{nama}</strong></h6></td>
                                     </tr>
                                     <tr>
                                         <td><h6 className='text-black'>No Hp </h6></td>
-                                        <td><h6 className='text-black'>:{noTelp} </h6></td>
+                                            <td><h6 className='text-black'>:<strong>{noTelp}</strong> </h6></td>
                                     </tr>
                                     <tr>
                                         <td><h6 className='text-black'>Instagram </h6></td>
-                                        <td><h6 className='text-black'>:{email} </h6></td>
+                                            <td><h6 className='text-black'>:<strong>{email} </strong></h6></td>
                                     </tr>
                                     <tr>
                                         <td><h6 className='text-black'>Tgl Booking </h6></td>
-                                        <td><h6 className='text-black'>:{tglPesan} </h6></td>
+                                            <td><h6 className='text-black'>:<strong>{tglPesan} </strong></h6></td>
                                     </tr>
                                     <tr>
                                         <td><h6 className='text-black'>Estimasi Waktu </h6></td>
-                                        <td><h6 className='text-black'>:{jadwalPesan} </h6></td>
+                                            <td><h6 className='text-black'>:<strong>{jadwalPesan}</strong> </h6></td>
                                     </tr>
                                     <tr>
                                         <td><h6 className='text-black'>Paket</h6></td>
-                                        <td><h6 className='text-black'>:{pilih} </h6></td>
+                                            <td><h6 className='text-black'>:<strong>{pilih}</strong> </h6></td>
                                     </tr>
                                         <tr>
-                                            <td><h6 className='text-black'>catatan</h6></td>
-                                            <td><h6 className='text-black'>:{catatan} </h6></td>
+                                            <td><h6 className='text-black'>Catatan</h6></td>
+                                            <td><h6 className='text-black'>:<strong>{catatan}</strong> </h6></td>
                                         </tr>
                                 </table>
 
