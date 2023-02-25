@@ -61,7 +61,7 @@ export default function Home() {
         <div className=''><a href="/selfstudio">
           <img src="./selfstudio.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/">
+        <div className=''><a href="/undangandg">
           <img src="./undangan.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/tenda">

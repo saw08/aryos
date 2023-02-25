@@ -6,14 +6,14 @@ async function getWeing(req, res) {
     // connect to the database
     let { db } = await connectToDatabase();
     // fetch the posts
-    let weding = await db
-      .collection('weding')
+    let undangan = await db
+      .collection('undangan')
       .find({})
       .sort({})
       .toArray();
     // return the posts
     return res.json({
-      message: JSON.parse(JSON.stringify(weding)),
+      message: JSON.parse(JSON.stringify(undangan)),
       success: true,
     });
   } catch (error) {
@@ -33,7 +33,7 @@ async function deleteWeing(req, res) {
     let { db } = await connectToDatabase();
     // Deleting the post
 
-    await db.collection('weding').deleteOne({
+    await db.collection('undangan').deleteOne({
       '_id': convertedObjectId
     });
     // returning a message
@@ -56,7 +56,7 @@ async function addWeding(req, res) {
     // connect to the database
     let { db } = await connectToDatabase();
     // add the post
-    await db.collection('weding').insertOne(JSON.parse(req.body));
+    await db.collection('undangan').insertOne(JSON.parse(req.body));
     // return a message
     return res.json({
       message: 'Data album Telah di Tambahkan',
