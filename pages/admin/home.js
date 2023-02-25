@@ -9,13 +9,13 @@ export default function Homeadmin() {
                     <div className="container" >
                         <div className="container position-relative text-center text-lg-start"   >
                             <section id="book-a-table">
-                                <div className="container" >
+                                <div className="" >
                                     <div className="row text-white p-3  text-center">
                                         <div className='p-2 col-lg-4 '>
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-weding" >
                                                     <div className="section-title">
-                                                        <p style={{ fontSize: '22px' }}>Weding</p>
+                                                        <h4 style={{ fontSize: '22px' }}>Weding</h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -24,7 +24,7 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-studio" >
                                                     <div className="section-title">
-                                                        <p style={{ fontSize: '22px' }}>Self Studio</p>
+                                                        <h4 style={{ fontSize: '22px' }}>Self Studio</h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -33,7 +33,7 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-studiou" >
                                                     <div className="section-title">
-                                                        <p style={{ fontSize: '22px' }}>Studio Utama</p>
+                                                        <h4 style={{ fontSize: '22px' }}>Studio Utama</h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -42,7 +42,7 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-ruang" >
                                                     <div className="section-title">
-                                                        <p style={{ fontSize: '22px' }}> ruang</p>
+                                                        <h4 style={{ fontSize: '22px' }}> ruang</h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -51,7 +51,7 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-kost" >
                                                     <div className="section-title">
-                                                        <p style={{ fontSize: '22px' }}> Kost</p>
+                                                        <h4 style={{ fontSize: '22px' }}> Kost</h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -60,7 +60,7 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-tenda" >
                                                     <div className="section-title">
-                                                        <p style={{ fontSize: '22px' }}>Tenda</p>
+                                                        <h4 style={{ fontSize: '22px' }}>Tenda</h4>
                                                     </div>
                                                 </a>
                                             </div>
