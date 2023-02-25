@@ -89,12 +89,12 @@ export default function Home() {
                         <div className="row">
                             <div className="col-lg-10 col-md-10 mt-3 form-group">
                                 <label  >Nama Pemesan</label>
-                                <input type="text"  className="form-control" placeholder="nama " value={nama} onChange={(e) => setNama(e.target.value)} data-msg="Please enter at least 4 chars" />
+                                <input type="text"  className="form-control" placeholder="Nama" value={nama} onChange={(e) => setNama(e.target.value)} data-msg="Please enter at least 4 chars" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Instagram</label>
-                                <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}  placeholder=" instagram" />
+                                <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}  placeholder=" Instagram" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
@@ -105,6 +105,7 @@ export default function Home() {
                             <div className="col-lg-10 col-md-10 form-group mt-3 colour-dark">
                                 <label  >Tanggal Booking</label>
                                 <input type="date" className="form-control" style={{ colorScheme: 'dark', color: 'black', backgroundColor: 'white' }} placeholder="dd/mm/yyyy" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
+                                <div className="validate" /> 
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Estimasi Jam Booking</label>
@@ -155,7 +156,7 @@ export default function Home() {
                             </div> */}
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Paket Yang Dipilih</label>
-                                <input type="email" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} name="paket" id="paket" placeholder="paket" data-rule="email" data-msg="Please enter a valid email" />
+                                <input type="email" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} name="paket" id="paket" placeholder="Paket" data-rule="email" data-msg="Please enter a valid email" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">

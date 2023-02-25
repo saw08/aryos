@@ -91,22 +91,23 @@ export default function Home() {
                         <div className="row">
                             <div className="col-lg-10 col-md-10 mt-3 form-group">
                                 <label  >Nama Pemesan</label>
-                                <input type="text" name="name" className="form-control" placeholder="Nama Pemesan" value={nama} onChange={(e) => setNama(e.target.value)} data-msg="Please enter at least 4 chars" />
+                                <input type="text" name="name" className="form-control" placeholder="Nama" value={nama} onChange={(e) => setNama(e.target.value)} data-msg="Please enter at least 4 chars" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Instagram</label>
-                                <input type="text" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="instagram" />
+                                <input type="text" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Instagram" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
                                 <label  >Nomor Kontak</label>
-                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} placeholder="nomor telp." />
+                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} placeholder="Nomor Telp." />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 text-dark">
                                 <label  >Tanggal Booking</label>
                                 <input type="date" style={{ colorScheme: 'dark', color: 'black', backgroundColor: 'white' }} placeholder="dd/mm/yyyy" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
+                                <div className="validate" />
                             </div>
                             
                             <div className="col-lg-10 col-md-10 form-group mt-3">
@@ -159,16 +160,16 @@ export default function Home() {
                             </div> */}
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
                                 <label  >Paket Yang Dipilih</label>
-                                <input type="text" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} placeholder="paket" />
+                                <input type="text" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} placeholder="Paket" />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Warna background</label>
-                                <input type="text" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} placeholder="warna" />
+                                <input type="text" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} placeholder="Warna" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label>Tambahan</label>
-                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="tambahan" defaultValue={""} />
+                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Tambahan" defaultValue={""} />
                                 <div className="validate" />
                                 <hr></hr>
                             </div>
