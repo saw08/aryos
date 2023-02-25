@@ -6,7 +6,7 @@ const Footers = () => {
         <footer id="footer">
             <div className="container ">
                 <div className="copyright">
-                    © Copyright <strong><span>-ar-</span></strong>
+                    © ARYO'S GROUP by -ar- 
                 </div>
             </div>
         </footer>
