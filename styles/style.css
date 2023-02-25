@@ -176,7 +176,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: linear-gradient(to top, #000000ba, #0a0a0acc), url("../public/geung.jpg") top center;  border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+  background: linear-gradient(to top, #000000ba, #0a0a0acc), url("../public/DEPAN.jpg") top center;  border-bottom: 1px solid rgba(12, 11, 9, 0.6);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
