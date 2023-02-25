@@ -40,9 +40,9 @@ export default function Homeadmin() {
                                         </div>
                                         <div className='p-2 col-lg-4'>
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
-                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-ruang" >
+                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-undangan" >
                                                     <div className="section-title">
-                                                        <h4 style={{ fontSize: '22px' }}> ruang</h4>
+                                                        <h4 style={{ fontSize: '22px' }}> Undangan</h4>
                                                     </div>
                                                 </a>
                                             </div>
