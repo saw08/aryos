@@ -1075,14 +1075,14 @@ section {
 # Events
 --------------------------------------------------------------*/
 .events {
-  background: url(/geung.jpg) center center no-repeat;
+  background: url(/DEPAN.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
 }
 
 .events::before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
   right: 0;
