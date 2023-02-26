@@ -2,5 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/admin/home": "pages/admin/home.js"
+  "/admin/tambah-nowa": "pages/admin/tambah-nowa.js",
+  "/api/db_nowa": "pages/api/db_nowa.js"
 }

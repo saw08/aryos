@@ -15,7 +15,7 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-weding" >
                                                     <div className="section-title">
-                                                        <h4 style={{ fontSize: '22px' }}>Weding</h4>
+                                                        <h4 style={{ fontSize: '22px' }}>Weding & Praweing</h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -61,6 +61,15 @@ export default function Homeadmin() {
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-tenda" >
                                                     <div className="section-title">
                                                         <h4 style={{ fontSize: '22px' }}>Tenda</h4>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className='p-2 col-lg-4 '>
+                                            <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
+                                                <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-nowa" >
+                                                    <div className="section-title">
+                                                        <h4 style={{ fontSize: '22px' }}>No Wa</h4>
                                                     </div>
                                                 </a>
                                             </div>

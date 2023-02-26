@@ -15,13 +15,13 @@ export default function Album() {
     const router = useRouter()
 
     const fetcher = (...args) => fetch(...args).then((res) => res.json())
-    const { data: data, error } = useSWR('/api/db_undangan', fetcher, { refreshInterval: 1000 })
+    const { data: data, error } = useSWR('/api/db_nowa', fetcher, { refreshInterval: 1000 })
 
 
     const handlePost = async (e) => {
         e.preventDefault();
 
-        if (!link)
+        if (!waweding || !wastudiutama || !waselfstudio || !waundangan || !watenda || !wakost)
             return setError('All fields are required');
         // post structure
         let nowa = {
@@ -60,50 +60,153 @@ export default function Album() {
     }
 
 
-    let undanganmap = data['message']
+    let nowamap = data['message']
 
     return (
         <>
             <section id="events" className="events">
                 <div className="container" >
                     <div className="section-title">
-                        <h2>UNDANGNAN</h2>
+                        <h2>NO WA</h2>
                     </div>
+                    {!data &&
                     <form onSubmit={handlePost} >
                         <div className=" col-lg-12">
                             <div className="col-lg-6 col-md-10 mt-3 form-group">
-                                <label style={{ color: "white" }}>UNDANGNAN </label>
-                                <input type="text"
+                                <label style={{ color: "white" }}>Wa Wedong &Prawedong </label>
+                                    <input type="number"
                                     className="form-control"
-                                    placeholder="Link undangan"
-                                    onChange={(e) => setLink(e.target.value)}
-                                    value={link}
+                                    placeholder="Wa weding"
+                                    onChange={(e) => setWeding(e.target.value)}
+                                    value={waweding}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Studio Utama </label>
+                                    <input type="number"
+                                    className="form-control"
+                                    placeholder="Wa Studio Utama"
+                                    onChange={(e) => setStudioutama(e.target.value)}
+                                    value={wastudiutama}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Self Studio </label>
+                                    <input type="number"
+                                    className="form-control"
+                                    placeholder="Wa self studio"
+                                    onChange={(e) => setSelfstudio(e.target.value)}
+                                    value={waselfstudio}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Undangan </label>
+                                    <input type="number"
+                                    className="form-control"
+                                    placeholder="Wa Undangan"
+                                    onChange={(e) => setUndangan(e.target.value)}
+                                    value={waundangan}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Aryo's Tenda </label>
+                                    <input type="number"
+                                    className="form-control"
+                                    placeholder="Wa aryos tenda"
+                                    onChange={(e) => setTenda(e.target.value)}
+                                    value={watenda}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Aryo's Kost </label>
+                                <input type="number"
+                                    className="form-control"
+                                    placeholder="Wa aryos Kost"
+                                    onChange={(e) => setKost(e.target.value)}
+                                    value={wakost}
                                 />
                                 <div className="validate" />
                             </div>
 
                             <div className="text-center col-lg-6 col-md-10 form-group mt-3 mt-5">
                                 <button className="book-a-table-btn" type="submit" disabled={uploading === false ? (false) : (true)}>Tambahkan</button>
-                                <div className="text-center col-lg-6 col-md-10">
-                                </div>
                             </div>
                         </div>
 
-                    </form>
+                        </form>
+                    }
                 </div>
             </section>
-            <div className="row col-lg-12">
-                {undanganmap.length === 0 ? (
-                    <></>
-                ) : (
-                    <>
-                        {undanganmap.map((data, i) => (
-                            <Cardfoto props={data} />
-                        ))}
-                    </>
-                )}
-            </div>
+            <section id="events" className="events">
+                {nowamap.map((data, i) => (
+                    <div className="container" >
+                        <div className=" col-lg-12">
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Weding &Praweding </label>
+                                <input type="text"
+                                    className="form-control"
+                                    readOnly
+                                    value={data.waweding}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Studio Utama </label>
+                                <input type="text"
+                                    className="form-control"
+                                    readOnly
+                                    value={data.wastudiutama}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Self Studio </label>
+                                <input type="text"
+                                    className="form-control"
+                                    readOnly
+                                    value={data.waselfstudio}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Undangan </label>
+                                <input type="text"
+                                    className="form-control" readOnly
+                                    value={data.waundangan}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Aryo's Tenda </label>
+                                <input type="text"
+                                    className="form-control"
+                                    readOnly
+                                    value={data.watenda}
+                                />
+                                <div className="validate" />
+                            </div>
+                            <div className="col-lg-6 col-md-10 mt-3 form-group">
+                                <label style={{ color: "white" }}>Wa Aryo's Kost </label>
+                                <input type="text"
+                                    className="form-control"
+                                    readOnly
+                                    value={data.wakost}
+                                />
+                                <div className="validate" />
+                            </div>
 
+                            <div className="text-center col-lg-6 col-md-10 form-group mt-3 mt-5">
+                                <button className="book-a-table-btn" type="submit" disabled={uploading === false ? (false) : (true)}>Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+                </section>
         </>
     )
 }
