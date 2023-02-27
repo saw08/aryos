@@ -26,7 +26,7 @@ export default function Home() {
                     <h2>STUDIO UTAMA</h2>
                 </div>
             </div>
-            <div className="">
+            <div className="container-fluid">
                 <div className="row col-lg-12">
                     {studio.length === 0 ? (
                         <></>

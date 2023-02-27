@@ -23,7 +23,7 @@ export default function Home() {
                     <h2>ARYO-S STUDIO</h2>
                 </div>
             </div> */}
-            <div className="" >
+            <div className="container-fluid" data-aos="fade-up" data-aos-delay={100}>
                 <div className="row col-lg-12">
                     {studio.length === 0 ? (
                         <></>

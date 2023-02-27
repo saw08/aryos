@@ -1,110 +1,45 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 272;
-exports.ids = [272];
+exports.id = "pages/api/db_studio";
+exports.ids = ["pages/api/db_studio"];
 exports.modules = {
 
-/***/ 8013:
+/***/ "mongodb":
+/*!**************************!*\
+  !*** external "mongodb" ***!
+  \**************************/
 /***/ ((module) => {
 
 module.exports = require("mongodb");
 
 /***/ }),
 
-/***/ 8673:
+/***/ "(api)/./lib/mongodb.js":
+/*!************************!*\
+  !*** ./lib/mongodb.js ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ handler)
-/* harmony export */ });
-const { connectToDatabase  } = __webpack_require__(6198);
-const ObjectId = (__webpack_require__(8013).ObjectId);
-// mengambil data dari collection mahasiswa
-async function getWeing(req, res) {
-    try {
-        // connect to the database
-        let { db  } = await connectToDatabase();
-        // fetch the posts
-        let studio = await db.collection("studio").find({}).sort({}).toArray();
-        // return the posts
-        return res.json({
-            message: JSON.parse(JSON.stringify(studio)),
-            success: true
-        });
-    } catch (error) {
-        // return the error
-        return res.json({
-            message: new Error(error).message,
-            success: false
-        });
-    }
-}
-async function deleteWeing(req, res) {
-    var ObjectId = (__webpack_require__(8013).ObjectId);
-    const { _id  } = req.body;
-    const convertedObjectId = new ObjectId(_id);
-    try {
-        // Connecting to the database
-        let { db  } = await connectToDatabase();
-        // Deleting the post
-        await db.collection("studio").deleteOne({
-            "_id": convertedObjectId
-        });
-        // returning a message
-        return res.json({
-            message: "Post deleted successfully",
-            success: true
-        });
-    } catch (error) {
-        // returning an error
-        return res.json({
-            message: new Error(error).message,
-            success: false
-        });
-    }
-}
-;
-// menambah data kedalam collection mahasiswa
-async function addWeding(req, res) {
-    try {
-        // connect to the database
-        let { db  } = await connectToDatabase();
-        // add the post
-        await db.collection("studio").insertOne(JSON.parse(req.body));
-        // return a message
-        return res.json({
-            message: "Data album Telah di Tambahkan",
-            success: true
-        });
-    } catch (error) {
-        // return an error
-        return res.json({
-            message: new Error(error).message,
-            success: false
-        });
-    }
-}
-// CRUD handler
-async function handler(req, res) {
-    // switch the methods
-    switch(req.method){
-        case "GET":
-            {
-                return getWeing(req, res);
-            }
-        case "POST":
-            {
-                return addWeding(req, res);
-            }
-        case "DELETE":
-            {
-                return deleteWeing(req, res);
-            }
-    }
-}
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"connectToDatabase\": () => (/* binding */ connectToDatabase)\n/* harmony export */ });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n\nconst MONGODB_URI = process.env.MONGODB_URI;\nconst MONGODB_DB = process.env.DB_NAME;\n// check the MongoDB URI\nif (!MONGODB_URI) {\n    throw new Error(\"Define the MONGODB_URI environmental variable\");\n} // check the MongoDB DB\nif (!MONGODB_DB) {\n    throw new Error(\"Define the MONGODB_DB environmental variable\");\n}\nlet cachedClient = null;\nlet cachedDb = null;\nasync function connectToDatabase() {\n    // check the cached.\n    if (cachedClient && cachedDb) {\n        // load from cache\n        return {\n            client: cachedClient,\n            db: cachedDb\n        };\n    }\n    // set the connection options\n    const opts = {\n        useNewUrlParser: true,\n        useUnifiedTopology: true\n    };\n    // Connect to cluster\n    let client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(MONGODB_URI, opts);\n    await client.connect();\n    let db = client.db(MONGODB_DB);\n    // set cache\n    cachedClient = client;\n    cachedDb = db;\n    return {\n        client: cachedClient,\n        db: cachedDb\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvbW9uZ29kYi5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBc0M7QUFDdEMsTUFBTUMsY0FBY0MsUUFBUUMsR0FBRyxDQUFDRixXQUFXO0FBQUUsTUFBTUcsYUFBYUYsUUFBUUMsR0FBRyxDQUFDRSxPQUFPO0FBQ25GLHdCQUF3QjtBQUN4QixJQUFJLENBQUNKLGFBQWE7SUFDZCxNQUFNLElBQUlLLE1BQU0saURBQWlEO0FBQ3JFLENBQUMsQ0FBQyx1QkFBdUI7QUFDekIsSUFBSSxDQUFDRixZQUFZO0lBQ2IsTUFBTSxJQUFJRSxNQUFNLGdEQUFnRDtBQUNwRSxDQUFDO0FBQUMsSUFBSUMsZUFDRixJQUFJO0FBQ1IsSUFBSUMsV0FBVyxJQUFJO0FBQ1osZUFBZUMsb0JBQW9CO0lBQ3RDLG9CQUFvQjtJQUNwQixJQUFJRixnQkFBZ0JDLFVBQVU7UUFDMUIsa0JBQWtCO1FBQ2xCLE9BQU87WUFDSEUsUUFBUUg7WUFDUkksSUFBSUg7UUFDUjtJQUNKLENBQUM7SUFDRCw2QkFBNkI7SUFDN0IsTUFBTUksT0FDTjtRQUNJQyxpQkFBaUIsSUFBSTtRQUNyQkMsb0JBQW9CLElBQUk7SUFDNUI7SUFDQSxxQkFBcUI7SUFDckIsSUFBSUosU0FBUyxJQUFJVixnREFBV0EsQ0FBQ0MsYUFBYVc7SUFDMUMsTUFBTUYsT0FBT0ssT0FBTztJQUNwQixJQUFJSixLQUFLRCxPQUFPQyxFQUFFLENBQUNQO0lBQ25CLFlBQVk7SUFDWkcsZUFBZUc7SUFDZkYsV0FBV0c7SUFDWCxPQUFPO1FBQ0hELFFBQVFIO1FBQ1JJLElBQUlIO0lBQ1I7QUFDSixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcmVzZXJ2YXNpLy4vbGliL21vbmdvZGIuanM/ZDkyMCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb25nb0NsaWVudCB9IGZyb20gJ21vbmdvZGInO1xuY29uc3QgTU9OR09EQl9VUkkgPSBwcm9jZXNzLmVudi5NT05HT0RCX1VSSTsgY29uc3QgTU9OR09EQl9EQiA9IHByb2Nlc3MuZW52LkRCX05BTUU7XG4vLyBjaGVjayB0aGUgTW9uZ29EQiBVUklcbmlmICghTU9OR09EQl9VUkkpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ0RlZmluZSB0aGUgTU9OR09EQl9VUkkgZW52aXJvbm1lbnRhbCB2YXJpYWJsZScpO1xufSAvLyBjaGVjayB0aGUgTW9uZ29EQiBEQlxuaWYgKCFNT05HT0RCX0RCKSB7XG4gICAgdGhyb3cgbmV3IEVycm9yKCdEZWZpbmUgdGhlIE1PTkdPREJfREIgZW52aXJvbm1lbnRhbCB2YXJpYWJsZScpO1xufSBsZXQgY2FjaGVkQ2xpZW50ID1cbiAgICBudWxsO1xubGV0IGNhY2hlZERiID0gbnVsbDtcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBjb25uZWN0VG9EYXRhYmFzZSgpIHtcbiAgICAvLyBjaGVjayB0aGUgY2FjaGVkLlxuICAgIGlmIChjYWNoZWRDbGllbnQgJiYgY2FjaGVkRGIpIHtcbiAgICAgICAgLy8gbG9hZCBmcm9tIGNhY2hlXG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICBjbGllbnQ6IGNhY2hlZENsaWVudCxcbiAgICAgICAgICAgIGRiOiBjYWNoZWREYixcbiAgICAgICAgfTtcbiAgICB9XG4gICAgLy8gc2V0IHRoZSBjb25uZWN0aW9uIG9wdGlvbnNcbiAgICBjb25zdCBvcHRzID1cbiAgICB7XG4gICAgICAgIHVzZU5ld1VybFBhcnNlcjogdHJ1ZSxcbiAgICAgICAgdXNlVW5pZmllZFRvcG9sb2d5OiB0cnVlLFxuICAgIH07XG4gICAgLy8gQ29ubmVjdCB0byBjbHVzdGVyXG4gICAgbGV0IGNsaWVudCA9IG5ldyBNb25nb0NsaWVudChNT05HT0RCX1VSSSwgb3B0cyk7XG4gICAgYXdhaXQgY2xpZW50LmNvbm5lY3QoKTtcbiAgICBsZXQgZGIgPSBjbGllbnQuZGIoTU9OR09EQl9EQik7XG4gICAgLy8gc2V0IGNhY2hlXG4gICAgY2FjaGVkQ2xpZW50ID0gY2xpZW50O1xuICAgIGNhY2hlZERiID0gZGI7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgY2xpZW50OiBjYWNoZWRDbGllbnQsXG4gICAgICAgIGRiOiBjYWNoZWREYixcbiAgICB9O1xufSJdLCJuYW1lcyI6WyJNb25nb0NsaWVudCIsIk1PTkdPREJfVVJJIiwicHJvY2VzcyIsImVudiIsIk1PTkdPREJfREIiLCJEQl9OQU1FIiwiRXJyb3IiLCJjYWNoZWRDbGllbnQiLCJjYWNoZWREYiIsImNvbm5lY3RUb0RhdGFiYXNlIiwiY2xpZW50IiwiZGIiLCJvcHRzIiwidXNlTmV3VXJsUGFyc2VyIiwidXNlVW5pZmllZFRvcG9sb2d5IiwiY29ubmVjdCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./lib/mongodb.js\n");
 
+/***/ }),
+
+/***/ "(api)/./pages/api/db_studio.js":
+/*!********************************!*\
+  !*** ./pages/api/db_studio.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\nconst { connectToDatabase  } = __webpack_require__(/*! ../../lib/mongodb */ \"(api)/./lib/mongodb.js\");\nconst ObjectId = (__webpack_require__(/*! mongodb */ \"mongodb\").ObjectId);\n// mengambil data dari collection mahasiswa\nasync function getWeing(req, res) {\n    try {\n        // connect to the database\n        let { db  } = await connectToDatabase();\n        // fetch the posts\n        let studio = await db.collection(\"studio\").find({}).sort({}).toArray();\n        // return the posts\n        return res.json({\n            message: JSON.parse(JSON.stringify(studio)),\n            success: true\n        });\n    } catch (error) {\n        // return the error\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\nasync function deleteWeing(req, res) {\n    var ObjectId = (__webpack_require__(/*! mongodb */ \"mongodb\").ObjectId);\n    const { _id  } = req.body;\n    const convertedObjectId = new ObjectId(_id);\n    try {\n        // Connecting to the database\n        let { db  } = await connectToDatabase();\n        // Deleting the post\n        await db.collection(\"studio\").deleteOne({\n            \"_id\": convertedObjectId\n        });\n        // returning a message\n        return res.json({\n            message: \"Post deleted successfully\",\n            success: true\n        });\n    } catch (error) {\n        // returning an error\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n;\n// menambah data kedalam collection mahasiswa\nasync function addWeding(req, res) {\n    try {\n        // connect to the database\n        let { db  } = await connectToDatabase();\n        // add the post\n        await db.collection(\"studio\").insertOne(JSON.parse(req.body));\n        // return a message\n        return res.json({\n            message: \"Data album Telah di Tambahkan\",\n            success: true\n        });\n    } catch (error) {\n        // return an error\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n// CRUD handler\nasync function handler(req, res) {\n    // switch the methods\n    switch(req.method){\n        case \"GET\":\n            {\n                return getWeing(req, res);\n            }\n        case \"POST\":\n            {\n                return addWeding(req, res);\n            }\n        case \"DELETE\":\n            {\n                return deleteWeing(req, res);\n            }\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvZGJfc3R1ZGlvLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBQSxNQUFNLEVBQUVBLGtCQUFpQixFQUFFLEdBQUdDLG1CQUFPQSxDQUFDO0FBQ3RDLE1BQU1DLFdBQVdELHdEQUEyQjtBQUM1QywyQ0FBMkM7QUFDM0MsZUFBZUUsU0FBU0MsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFDaEMsSUFBSTtRQUNGLDBCQUEwQjtRQUMxQixJQUFJLEVBQUVDLEdBQUUsRUFBRSxHQUFHLE1BQU1OO1FBQ25CLGtCQUFrQjtRQUNsQixJQUFJTyxTQUFTLE1BQU1ELEdBQ2hCRSxVQUFVLENBQUMsVUFDWEMsSUFBSSxDQUFDLENBQUMsR0FDTkMsSUFBSSxDQUFDLENBQUMsR0FDTkMsT0FBTztRQUNWLG1CQUFtQjtRQUNuQixPQUFPTixJQUFJTyxJQUFJLENBQUM7WUFDZEMsU0FBU0MsS0FBS0MsS0FBSyxDQUFDRCxLQUFLRSxTQUFTLENBQUNUO1lBQ25DVSxTQUFTLElBQUk7UUFDZjtJQUNGLEVBQUUsT0FBT0MsT0FBTztRQUNkLG1CQUFtQjtRQUNuQixPQUFPYixJQUFJTyxJQUFJLENBQUM7WUFDZEMsU0FBUyxJQUFJTSxNQUFNRCxPQUFPTCxPQUFPO1lBQ2pDSSxTQUFTLEtBQUs7UUFDaEI7SUFDRjtBQUNGO0FBQ0EsZUFBZUcsWUFBWWhCLEdBQUcsRUFBRUMsR0FBRyxFQUFFO0lBQ25DLElBQUlILFdBQVdELHdEQUEyQjtJQUMxQyxNQUFNLEVBQUVvQixJQUFHLEVBQUUsR0FBR2pCLElBQUlrQixJQUFJO0lBQ3hCLE1BQU1DLG9CQUFvQixJQUFJckIsU0FBU21CO0lBQ3ZDLElBQUk7UUFDRiw2QkFBNkI7UUFDN0IsSUFBSSxFQUFFZixHQUFFLEVBQUUsR0FBRyxNQUFNTjtRQUNuQixvQkFBb0I7UUFFcEIsTUFBTU0sR0FBR0UsVUFBVSxDQUFDLFVBQVVnQixTQUFTLENBQUM7WUFDdEMsT0FBT0Q7UUFDVDtRQUNBLHNCQUFzQjtRQUN0QixPQUFPbEIsSUFBSU8sSUFBSSxDQUFDO1lBQ2RDLFNBQVM7WUFDVEksU0FBUyxJQUFJO1FBQ2Y7SUFDRixFQUFFLE9BQU9DLE9BQU87UUFDZCxxQkFBcUI7UUFDckIsT0FBT2IsSUFBSU8sSUFBSSxDQUFDO1lBQ2RDLFNBQVMsSUFBSU0sTUFBTUQsT0FBT0wsT0FBTztZQUNqQ0ksU0FBUyxLQUFLO1FBQ2hCO0lBQ0Y7QUFDRjs7QUFFQSw2Q0FBNkM7QUFDN0MsZUFBZVEsVUFBVXJCLEdBQUcsRUFBRUMsR0FBRyxFQUFFO0lBQ2pDLElBQUk7UUFDRiwwQkFBMEI7UUFDMUIsSUFBSSxFQUFFQyxHQUFFLEVBQUUsR0FBRyxNQUFNTjtRQUNuQixlQUFlO1FBQ2YsTUFBTU0sR0FBR0UsVUFBVSxDQUFDLFVBQVVrQixTQUFTLENBQUNaLEtBQUtDLEtBQUssQ0FBQ1gsSUFBSWtCLElBQUk7UUFDM0QsbUJBQW1CO1FBQ25CLE9BQU9qQixJQUFJTyxJQUFJLENBQUM7WUFDZEMsU0FBUztZQUNUSSxTQUFTLElBQUk7UUFDZjtJQUNGLEVBQUUsT0FBT0MsT0FBTztRQUNkLGtCQUFrQjtRQUNsQixPQUFPYixJQUFJTyxJQUFJLENBQUM7WUFDZEMsU0FBUyxJQUFJTSxNQUFNRCxPQUFPTCxPQUFPO1lBQ2pDSSxTQUFTLEtBQUs7UUFDaEI7SUFDRjtBQUNGO0FBQ0EsZUFBZTtBQUNBLGVBQWVVLFFBQVF2QixHQUFHLEVBQUVDLEdBQUcsRUFBRTtJQUM5QyxxQkFBcUI7SUFDckIsT0FBUUQsSUFBSXdCLE1BQU07UUFDaEIsS0FBSztZQUFPO2dCQUNWLE9BQU96QixTQUFTQyxLQUFLQztZQUN2QjtRQUNBLEtBQUs7WUFBUTtnQkFDWCxPQUFPb0IsVUFBVXJCLEtBQUtDO1lBQ3hCO1FBQ0EsS0FBSztZQUFVO2dCQUNiLE9BQU9lLFlBQVloQixLQUFLQztZQUMxQjtJQUNGO0FBQ0YsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Jlc2VydmFzaS8uL3BhZ2VzL2FwaS9kYl9zdHVkaW8uanM/MTM2YiJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCB7IGNvbm5lY3RUb0RhdGFiYXNlIH0gPSByZXF1aXJlKCcuLi8uLi9saWIvbW9uZ29kYicpO1xuY29uc3QgT2JqZWN0SWQgPSByZXF1aXJlKCdtb25nb2RiJykuT2JqZWN0SWQ7XG4vLyBtZW5nYW1iaWwgZGF0YSBkYXJpIGNvbGxlY3Rpb24gbWFoYXNpc3dhXG5hc3luYyBmdW5jdGlvbiBnZXRXZWluZyhyZXEsIHJlcykge1xuICB0cnkge1xuICAgIC8vIGNvbm5lY3QgdG8gdGhlIGRhdGFiYXNlXG4gICAgbGV0IHsgZGIgfSA9IGF3YWl0IGNvbm5lY3RUb0RhdGFiYXNlKCk7XG4gICAgLy8gZmV0Y2ggdGhlIHBvc3RzXG4gICAgbGV0IHN0dWRpbyA9IGF3YWl0IGRiXG4gICAgICAuY29sbGVjdGlvbignc3R1ZGlvJylcbiAgICAgIC5maW5kKHt9KVxuICAgICAgLnNvcnQoe30pXG4gICAgICAudG9BcnJheSgpO1xuICAgIC8vIHJldHVybiB0aGUgcG9zdHNcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShzdHVkaW8pKSxcbiAgICAgIHN1Y2Nlc3M6IHRydWUsXG4gICAgfSk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgLy8gcmV0dXJuIHRoZSBlcnJvclxuICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICBtZXNzYWdlOiBuZXcgRXJyb3IoZXJyb3IpLm1lc3NhZ2UsXG4gICAgICBzdWNjZXNzOiBmYWxzZSxcbiAgICB9KTtcbiAgfVxufVxuYXN5bmMgZnVuY3Rpb24gZGVsZXRlV2VpbmcocmVxLCByZXMpIHtcbiAgdmFyIE9iamVjdElkID0gcmVxdWlyZSgnbW9uZ29kYicpLk9iamVjdElkO1xuICBjb25zdCB7IF9pZCB9ID0gcmVxLmJvZHk7XG4gIGNvbnN0IGNvbnZlcnRlZE9iamVjdElkID0gbmV3IE9iamVjdElkKF9pZCk7XG4gIHRyeSB7XG4gICAgLy8gQ29ubmVjdGluZyB0byB0aGUgZGF0YWJhc2VcbiAgICBsZXQgeyBkYiB9ID0gYXdhaXQgY29ubmVjdFRvRGF0YWJhc2UoKTtcbiAgICAvLyBEZWxldGluZyB0aGUgcG9zdFxuXG4gICAgYXdhaXQgZGIuY29sbGVjdGlvbignc3R1ZGlvJykuZGVsZXRlT25lKHtcbiAgICAgICdfaWQnOiBjb252ZXJ0ZWRPYmplY3RJZFxuICAgIH0pO1xuICAgIC8vIHJldHVybmluZyBhIG1lc3NhZ2VcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogJ1Bvc3QgZGVsZXRlZCBzdWNjZXNzZnVsbHknLFxuICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICB9KTtcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAvLyByZXR1cm5pbmcgYW4gZXJyb3JcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgfSk7XG4gIH1cbn07XG5cbi8vIG1lbmFtYmFoIGRhdGEga2VkYWxhbSBjb2xsZWN0aW9uIG1haGFzaXN3YVxuYXN5bmMgZnVuY3Rpb24gYWRkV2VkaW5nKHJlcSwgcmVzKSB7XG4gIHRyeSB7XG4gICAgLy8gY29ubmVjdCB0byB0aGUgZGF0YWJhc2VcbiAgICBsZXQgeyBkYiB9ID0gYXdhaXQgY29ubmVjdFRvRGF0YWJhc2UoKTtcbiAgICAvLyBhZGQgdGhlIHBvc3RcbiAgICBhd2FpdCBkYi5jb2xsZWN0aW9uKCdzdHVkaW8nKS5pbnNlcnRPbmUoSlNPTi5wYXJzZShyZXEuYm9keSkpO1xuICAgIC8vIHJldHVybiBhIG1lc3NhZ2VcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogJ0RhdGEgYWxidW0gVGVsYWggZGkgVGFtYmFoa2FuJyxcbiAgICAgIHN1Y2Nlc3M6IHRydWUsXG4gICAgfSk7XG4gIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgLy8gcmV0dXJuIGFuIGVycm9yXG4gICAgcmV0dXJuIHJlcy5qc29uKHtcbiAgICAgIG1lc3NhZ2U6IG5ldyBFcnJvcihlcnJvcikubWVzc2FnZSxcbiAgICAgIHN1Y2Nlc3M6IGZhbHNlLFxuICAgIH0pO1xuICB9XG59XG4vLyBDUlVEIGhhbmRsZXJcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIGhhbmRsZXIocmVxLCByZXMpIHtcbiAgLy8gc3dpdGNoIHRoZSBtZXRob2RzXG4gIHN3aXRjaCAocmVxLm1ldGhvZCkge1xuICAgIGNhc2UgJ0dFVCc6IHtcbiAgICAgIHJldHVybiBnZXRXZWluZyhyZXEsIHJlcyk7XG4gICAgfVxuICAgIGNhc2UgJ1BPU1QnOiB7XG4gICAgICByZXR1cm4gYWRkV2VkaW5nKHJlcSwgcmVzKTtcbiAgICB9XG4gICAgY2FzZSAnREVMRVRFJzoge1xuICAgICAgcmV0dXJuIGRlbGV0ZVdlaW5nKHJlcSwgcmVzKTtcbiAgICB9XG4gIH1cbn0iXSwibmFtZXMiOlsiY29ubmVjdFRvRGF0YWJhc2UiLCJyZXF1aXJlIiwiT2JqZWN0SWQiLCJnZXRXZWluZyIsInJlcSIsInJlcyIsImRiIiwic3R1ZGlvIiwiY29sbGVjdGlvbiIsImZpbmQiLCJzb3J0IiwidG9BcnJheSIsImpzb24iLCJtZXNzYWdlIiwiSlNPTiIsInBhcnNlIiwic3RyaW5naWZ5Iiwic3VjY2VzcyIsImVycm9yIiwiRXJyb3IiLCJkZWxldGVXZWluZyIsIl9pZCIsImJvZHkiLCJjb252ZXJ0ZWRPYmplY3RJZCIsImRlbGV0ZU9uZSIsImFkZFdlZGluZyIsImluc2VydE9uZSIsImhhbmRsZXIiLCJtZXRob2QiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/db_studio.js\n");
 
 /***/ })
 
@@ -115,7 +50,7 @@ async function handler(req, res) {
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [198], () => (__webpack_exec__(8673)));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/db_studio.js"));
 module.exports = __webpack_exports__;
 
 })();
