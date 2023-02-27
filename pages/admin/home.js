@@ -15,7 +15,7 @@ export default function Homeadmin() {
                                             <div className=" p-2" style={{ borderStyle: 'solid', borderColor: 'white', borderRadius: '0.3rem' }}>
                                                 <a style={{ textDecoration: 'none', color: 'white' }} href="/admin/tambah-weding" >
                                                     <div className="section-title">
-                                                        <h4 style={{ fontSize: '22px' }}>Weding & Praweing</h4>
+                                                        <h4 style={{ fontSize: '22px' }}>Wedding & Prawedding</h4>
                                                     </div>
                                                 </a>
                                             </div>
