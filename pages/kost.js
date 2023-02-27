@@ -15,7 +15,7 @@ export default function Home() {
     let nowa = data['message']
     const pesanWhatsapp = async (e) => {
         // let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0ABackground : ${begrond}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
-        let text = `*Halo, Saya tertarik dengan pelayanan dari ARYO'S KOST*`
+        let text = `Halo, Saya tertarik dengan pelayanan dari *ARYO'S%20KOST*`
         let urlRed = `https://wa.me/+62${nowa[0].wakost}?text=${text}`
         document.location.href = urlRed
     }
