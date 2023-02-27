@@ -20,7 +20,7 @@ export default function Home() {
         <section id="gallery" className="gallery">
             <div className="container" data-aos="fade-up">
                 <div className="section-title">
-                    <h2>WEDING & PRAWEDING</h2>
+                    <h2>WEDDING & PRAWEDDING</h2>
                 </div>
             </div>
             <div className="container-fluid" data-aos="fade-up">
