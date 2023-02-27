@@ -59,7 +59,49 @@ async function addWeding(req, res) {
     await db.collection('nowa').insertOne(JSON.parse(req.body));
     // return a message
     return res.json({
-      message: 'Data album Telah di Tambahkan',
+      message: 'Data nowa Telah di Tambahkan',
+      success: true,
+    });
+  } catch (error) {
+    // return an error
+    return res.json({
+      message: new Error(error).message,
+      success: false,
+    });
+  }
+}
+async function updateMenu(req, res) {
+  const { waweding,
+    wastudiutama,
+    waselfstudio,
+    waundangan,
+    watenda,
+    wakost,
+    objectId, } = req.body
+  var ObjectId = require('mongodb').ObjectId;
+  const convertedObjectId = new ObjectId(objectId);
+  try {
+    // connect to the database
+    let { db } = await connectToDatabase();
+    // update the published status of the post
+    await db.collection('nowa').updateOne(
+      {
+        '_id': convertedObjectId
+      },
+      {
+        $set: {
+          'waweding': waweding,
+          'wastudiutama': wastudiutama,
+          'waselfstudio': waselfstudio,
+          'waundangan': waundangan,
+          'watenda': watenda,
+          'wakost': wakost,
+        }
+      }
+    );
+    // return a message
+    return res.json({
+      message: 'Post updated successfully',
       success: true,
     });
   } catch (error) {
@@ -82,6 +124,9 @@ export default async function handler(req, res) {
     }
     case 'DELETE': {
       return deleteWeing(req, res);
+    }
+    case 'PUT': {
+      return updateMenu(req, res);
     }
   }
 }

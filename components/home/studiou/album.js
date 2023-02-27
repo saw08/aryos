@@ -15,7 +15,10 @@ export default function Home() {
     }
 
 
-    let studio = data['message']
+
+    let pesanArr = data['message']
+    let studio = pesanArr['studiou']
+    let nowa = pesanArr['nowa']
     return (
         <section id="gallery" className="gallery">
             <div className="container" data-aos="fade-up">
@@ -23,7 +26,7 @@ export default function Home() {
                     <h2>STUDIO UTAMA</h2>
                 </div>
             </div>
-            <div className="container-fluid" data-aos="fade-up" data-aos-delay={100}>
+            <div className="">
                 <div className="row col-lg-12">
                     {studio.length === 0 ? (
                         <></>

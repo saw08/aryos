@@ -25,10 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/admin/tambah-nowa": [
+    "/admin/tambah-studiou": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/admin/tambah-nowa.js"
+      "static/chunks/pages/admin/tambah-studiou.js"
+    ],
+    "/studioutama": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/studioutama.js"
     ]
   },
   "ampFirstPages": []

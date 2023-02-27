@@ -15,7 +15,9 @@ export default function Home() {
     }
 
 
-    let studio = data['message']
+    let pesanArr = data['message']
+    let studio = pesanArr['studiou']
+    let nowa = pesanArr['nowa']
     return (
         <section id="gallery" className="gallery">
             <div className="container" data-aos="fade-up">

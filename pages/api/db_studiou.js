@@ -12,8 +12,16 @@ async function getWeing(req, res) {
       .sort({})
       .toArray();
     // return the posts
+    let nowa = await db
+      .collection('nowa')
+      .find({
+      })
+      .toArray();
+    let hasil = {}
+    hasil['studiou'] = studiou
+    hasil['nowa'] = nowa
     return res.json({
-      message: JSON.parse(JSON.stringify(studiou)),
+      message: JSON.parse(JSON.stringify(hasil)),
       success: true,
     });
   } catch (error) {

@@ -16,16 +16,23 @@ export default function Home() {
     const [catatan, setCatatan] = useState([]);
     const [begrond, setBegrond] = useState([]);
     const [isCheck, setIsCheck] = useState(true);
-    const fetcher = (...args) => fetch(...args).then((res) => res.json())
-    const { data: data, error } = useSWR('/api/db_studio', fetcher, { refreshInterval: 1000 })
+    // const fetcher = (...args) => fetch(...args).then((res) => res.json())
+    // const { data: data, error } = useSWR('/api/db_studio', fetcher, { refreshInterval: 1000 })
 
+    // if (!data) {
+    //     return <div className="spinner"></div>
+    // } else if (error) {
+    //     return <div>Something went wrong</div>
+    // }
+    // let studio = data['message']
+    const fetcher = (...args) => fetch(...args).then((res) => res.json())
+    const { data: data, error } = useSWR('/api/db_nowa', fetcher, { refreshInterval: 1000 })
     if (!data) {
         return <div className="spinner"></div>
     } else if (error) {
         return <div>Something went wrong</div>
     }
-    let studio = data['message']
-
+    let nowa = data['message']
     // let pesanArr = data['message']
     // let ruangan = pesanArr['ruangan']
     // console.log(pesanArr)
@@ -34,8 +41,7 @@ export default function Home() {
         + (currentdate.getMonth() + 1) + "/"
         + currentdate.getFullYear()
 
-    let nextDay = moment(dateDate, "DD/MM/YYYY").add(1, 'days').format('YYYY-MM-DD')
-
+    let startOfMonth = moment().startOf('month').format('YYYY-MM-DD')
     let jamTersedia = ['08.00', '09.00', '10.00', '11.00', '12.00', '13.00', '14.00', '15.00', '16.00', '17.00', '18.00', '19.00', '20.00', '21.00', '22.00']
 
 
@@ -66,7 +72,7 @@ export default function Home() {
         document.write("\n");
         // let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0ABackground : ${begrond}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
         let text = `*Hai kak ARYO'S SELF STUDIO*, saya ingin reservasi%0ANama%20%3A%20*${nama}*%0ANo%20hp%20%3A%20*${noTelp}*%0AInstagram%20%3A%20*${email}*%0ATgl%20booking%20%3A%20*${tglPesan}*%0AEstimasi%20waktu%20%3A%20*${jadwalPesan}*%0APaket%20%3A%20*${pilih}*%0ABackground%20%3A%20*${begrond}*%0ATambahan%20%3A%20*${catatan}*%0AApakah slot tersebut tersedia?%0A*Terimakasih*`
-        let urlRed = `https://wa.me/+6281353025114?text=${text}`
+        let urlRed = `https://wa.me/+62${nowa[0].watenda}?text=${text}`
         document.location.href = urlRed
     }
 
@@ -106,7 +112,7 @@ export default function Home() {
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 text-dark">
                                 <label  >Tanggal Booking</label>
-                                <input type="date" style={{ colorScheme: 'dark', color: 'black', backgroundColor: 'white' }} placeholder="dd/mm/yyyy" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
+                                <input type="date" min={startOfMonth} style={{ colorScheme: 'dark', color: 'black', backgroundColor: 'white' }} placeholder="dd/mm/yyyy" className="form-control" value={tglPesan} onChange={(e) => setTglPesan(e.target.value)} />
                                 <div className="validate" />
                             </div>
                             

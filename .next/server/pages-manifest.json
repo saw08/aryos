@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/admin/tambah-nowa": "pages/admin/tambah-nowa.js",
-  "/api/db_nowa": "pages/api/db_nowa.js"
+  "/studioutama": "pages/studioutama.js",
+  "/admin/tambah-studiou": "pages/admin/tambah-studiou.js",
+  "/api/db_studiou": "pages/api/db_studiou.js"
 }

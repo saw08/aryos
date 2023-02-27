@@ -24,8 +24,11 @@ export default function Home() {
     } else if (error) {
         return <div>Something went wrong</div>
     }
-    let studio = data['message']
+    let pesanArr = data['message']
+    let studio = pesanArr['studiou']
+    let nowa = pesanArr['menu']
 
+   
     // let pesanArr = data['message']
     // let ruangan = pesanArr['ruangan']
     // console.log(pesanArr)
@@ -64,7 +67,7 @@ export default function Home() {
     const pesanWhatsapp = async (e) => {
         let text = `*Hai kak ARYO'S STUDIO*, saya ingin reservasi%0ANama%20%3A%20*${nama}*%0ANo%20hp%20%3A%20*${noTelp}*%0AInstagram%20%3A%20*${email}*%0ATgl%20booking%20%3A%20*${pilih}*%0ATambahan%20%3A%20*${catatan}*%0AApakah slot tersebut tersedia?%0ATerimakasih`
         // let text = `Hai kak ARYO'S STUDIO UTAMA, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
-        let urlRed = `https://wa.me/+6281353025114?text=${text}`
+        let urlRed = `https://wa.me/+62${pesanArr.nowa[0].wastudiutama}?text=${text}`
         document.location.href = urlRed
     }
 
