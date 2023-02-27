@@ -1,45 +1,147 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/db_nowa";
-exports.ids = ["pages/api/db_nowa"];
+exports.id = 815;
+exports.ids = [815];
 exports.modules = {
 
-/***/ "mongodb":
-/*!**************************!*\
-  !*** external "mongodb" ***!
-  \**************************/
+/***/ 8013:
 /***/ ((module) => {
 
 module.exports = require("mongodb");
 
 /***/ }),
 
-/***/ "(api)/./lib/mongodb.js":
-/*!************************!*\
-  !*** ./lib/mongodb.js ***!
-  \************************/
+/***/ 941:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"connectToDatabase\": () => (/* binding */ connectToDatabase)\n/* harmony export */ });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n\nconst MONGODB_URI = process.env.MONGODB_URI;\nconst MONGODB_DB = process.env.DB_NAME;\n// check the MongoDB URI\nif (!MONGODB_URI) {\n    throw new Error(\"Define the MONGODB_URI environmental variable\");\n} // check the MongoDB DB\nif (!MONGODB_DB) {\n    throw new Error(\"Define the MONGODB_DB environmental variable\");\n}\nlet cachedClient = null;\nlet cachedDb = null;\nasync function connectToDatabase() {\n    // check the cached.\n    if (cachedClient && cachedDb) {\n        // load from cache\n        return {\n            client: cachedClient,\n            db: cachedDb\n        };\n    }\n    // set the connection options\n    const opts = {\n        useNewUrlParser: true,\n        useUnifiedTopology: true\n    };\n    // Connect to cluster\n    let client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(MONGODB_URI, opts);\n    await client.connect();\n    let db = client.db(MONGODB_DB);\n    // set cache\n    cachedClient = client;\n    cachedDb = db;\n    return {\n        client: cachedClient,\n        db: cachedDb\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvbW9uZ29kYi5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBc0M7QUFDdEMsTUFBTUMsY0FBY0MsUUFBUUMsR0FBRyxDQUFDRixXQUFXO0FBQUUsTUFBTUcsYUFBYUYsUUFBUUMsR0FBRyxDQUFDRSxPQUFPO0FBQ25GLHdCQUF3QjtBQUN4QixJQUFJLENBQUNKLGFBQWE7SUFDZCxNQUFNLElBQUlLLE1BQU0saURBQWlEO0FBQ3JFLENBQUMsQ0FBQyx1QkFBdUI7QUFDekIsSUFBSSxDQUFDRixZQUFZO0lBQ2IsTUFBTSxJQUFJRSxNQUFNLGdEQUFnRDtBQUNwRSxDQUFDO0FBQUMsSUFBSUMsZUFDRixJQUFJO0FBQ1IsSUFBSUMsV0FBVyxJQUFJO0FBQ1osZUFBZUMsb0JBQW9CO0lBQ3RDLG9CQUFvQjtJQUNwQixJQUFJRixnQkFBZ0JDLFVBQVU7UUFDMUIsa0JBQWtCO1FBQ2xCLE9BQU87WUFDSEUsUUFBUUg7WUFDUkksSUFBSUg7UUFDUjtJQUNKLENBQUM7SUFDRCw2QkFBNkI7SUFDN0IsTUFBTUksT0FDTjtRQUNJQyxpQkFBaUIsSUFBSTtRQUNyQkMsb0JBQW9CLElBQUk7SUFDNUI7SUFDQSxxQkFBcUI7SUFDckIsSUFBSUosU0FBUyxJQUFJVixnREFBV0EsQ0FBQ0MsYUFBYVc7SUFDMUMsTUFBTUYsT0FBT0ssT0FBTztJQUNwQixJQUFJSixLQUFLRCxPQUFPQyxFQUFFLENBQUNQO0lBQ25CLFlBQVk7SUFDWkcsZUFBZUc7SUFDZkYsV0FBV0c7SUFDWCxPQUFPO1FBQ0hELFFBQVFIO1FBQ1JJLElBQUlIO0lBQ1I7QUFDSixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcmVzZXJ2YXNpLy4vbGliL21vbmdvZGIuanM/ZDkyMCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb25nb0NsaWVudCB9IGZyb20gJ21vbmdvZGInO1xuY29uc3QgTU9OR09EQl9VUkkgPSBwcm9jZXNzLmVudi5NT05HT0RCX1VSSTsgY29uc3QgTU9OR09EQl9EQiA9IHByb2Nlc3MuZW52LkRCX05BTUU7XG4vLyBjaGVjayB0aGUgTW9uZ29EQiBVUklcbmlmICghTU9OR09EQl9VUkkpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ0RlZmluZSB0aGUgTU9OR09EQl9VUkkgZW52aXJvbm1lbnRhbCB2YXJpYWJsZScpO1xufSAvLyBjaGVjayB0aGUgTW9uZ29EQiBEQlxuaWYgKCFNT05HT0RCX0RCKSB7XG4gICAgdGhyb3cgbmV3IEVycm9yKCdEZWZpbmUgdGhlIE1PTkdPREJfREIgZW52aXJvbm1lbnRhbCB2YXJpYWJsZScpO1xufSBsZXQgY2FjaGVkQ2xpZW50ID1cbiAgICBudWxsO1xubGV0IGNhY2hlZERiID0gbnVsbDtcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBjb25uZWN0VG9EYXRhYmFzZSgpIHtcbiAgICAvLyBjaGVjayB0aGUgY2FjaGVkLlxuICAgIGlmIChjYWNoZWRDbGllbnQgJiYgY2FjaGVkRGIpIHtcbiAgICAgICAgLy8gbG9hZCBmcm9tIGNhY2hlXG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICBjbGllbnQ6IGNhY2hlZENsaWVudCxcbiAgICAgICAgICAgIGRiOiBjYWNoZWREYixcbiAgICAgICAgfTtcbiAgICB9XG4gICAgLy8gc2V0IHRoZSBjb25uZWN0aW9uIG9wdGlvbnNcbiAgICBjb25zdCBvcHRzID1cbiAgICB7XG4gICAgICAgIHVzZU5ld1VybFBhcnNlcjogdHJ1ZSxcbiAgICAgICAgdXNlVW5pZmllZFRvcG9sb2d5OiB0cnVlLFxuICAgIH07XG4gICAgLy8gQ29ubmVjdCB0byBjbHVzdGVyXG4gICAgbGV0IGNsaWVudCA9IG5ldyBNb25nb0NsaWVudChNT05HT0RCX1VSSSwgb3B0cyk7XG4gICAgYXdhaXQgY2xpZW50LmNvbm5lY3QoKTtcbiAgICBsZXQgZGIgPSBjbGllbnQuZGIoTU9OR09EQl9EQik7XG4gICAgLy8gc2V0IGNhY2hlXG4gICAgY2FjaGVkQ2xpZW50ID0gY2xpZW50O1xuICAgIGNhY2hlZERiID0gZGI7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgY2xpZW50OiBjYWNoZWRDbGllbnQsXG4gICAgICAgIGRiOiBjYWNoZWREYixcbiAgICB9O1xufSJdLCJuYW1lcyI6WyJNb25nb0NsaWVudCIsIk1PTkdPREJfVVJJIiwicHJvY2VzcyIsImVudiIsIk1PTkdPREJfREIiLCJEQl9OQU1FIiwiRXJyb3IiLCJjYWNoZWRDbGllbnQiLCJjYWNoZWREYiIsImNvbm5lY3RUb0RhdGFiYXNlIiwiY2xpZW50IiwiZGIiLCJvcHRzIiwidXNlTmV3VXJsUGFyc2VyIiwidXNlVW5pZmllZFRvcG9sb2d5IiwiY29ubmVjdCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./lib/mongodb.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ handler)
+/* harmony export */ });
+const { connectToDatabase  } = __webpack_require__(6198);
+const ObjectId = (__webpack_require__(8013).ObjectId);
+// mengambil data dari collection mahasiswa
+async function getWeing(req, res) {
+    try {
+        // connect to the database
+        let { db  } = await connectToDatabase();
+        // fetch the posts
+        let nowa = await db.collection("nowa").find({}).sort({}).toArray();
+        // return the posts
+        return res.json({
+            message: JSON.parse(JSON.stringify(nowa)),
+            success: true
+        });
+    } catch (error) {
+        // return the error
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+async function deleteWeing(req, res) {
+    var ObjectId = (__webpack_require__(8013).ObjectId);
+    const { _id  } = req.body;
+    const convertedObjectId = new ObjectId(_id);
+    try {
+        // Connecting to the database
+        let { db  } = await connectToDatabase();
+        // Deleting the post
+        await db.collection("nowa").deleteOne({
+            "_id": convertedObjectId
+        });
+        // returning a message
+        return res.json({
+            message: "Post deleted successfully",
+            success: true
+        });
+    } catch (error) {
+        // returning an error
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+;
+// menambah data kedalam collection mahasiswa
+async function addWeding(req, res) {
+    try {
+        // connect to the database
+        let { db  } = await connectToDatabase();
+        // add the post
+        await db.collection("nowa").insertOne(JSON.parse(req.body));
+        // return a message
+        return res.json({
+            message: "Data nowa Telah di Tambahkan",
+            success: true
+        });
+    } catch (error) {
+        // return an error
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+async function updateMenu(req, res) {
+    const { waweding , wastudiutama , waselfstudio , waundangan , watenda , wakost , objectId  } = req.body;
+    var ObjectId = (__webpack_require__(8013).ObjectId);
+    const convertedObjectId = new ObjectId(objectId);
+    try {
+        // connect to the database
+        let { db  } = await connectToDatabase();
+        // update the published status of the post
+        await db.collection("nowa").updateOne({
+            "_id": convertedObjectId
+        }, {
+            $set: {
+                "waweding": waweding,
+                "wastudiutama": wastudiutama,
+                "waselfstudio": waselfstudio,
+                "waundangan": waundangan,
+                "watenda": watenda,
+                "wakost": wakost
+            }
+        });
+        // return a message
+        return res.json({
+            message: "Post updated successfully",
+            success: true
+        });
+    } catch (error) {
+        // return an error
+        return res.json({
+            message: new Error(error).message,
+            success: false
+        });
+    }
+}
+// CRUD handler
+async function handler(req, res) {
+    // switch the methods
+    switch(req.method){
+        case "GET":
+            {
+                return getWeing(req, res);
+            }
+        case "POST":
+            {
+                return addWeding(req, res);
+            }
+        case "DELETE":
+            {
+                return deleteWeing(req, res);
+            }
+        case "PUT":
+            {
+                return updateMenu(req, res);
+            }
+    }
+}
 
-/***/ }),
-
-/***/ "(api)/./pages/api/db_nowa.js":
-/*!******************************!*\
-  !*** ./pages/api/db_nowa.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\nconst { connectToDatabase  } = __webpack_require__(/*! ../../lib/mongodb */ \"(api)/./lib/mongodb.js\");\nconst ObjectId = (__webpack_require__(/*! mongodb */ \"mongodb\").ObjectId);\n// mengambil data dari collection mahasiswa\nasync function getWeing(req, res) {\n    try {\n        // connect to the database\n        let { db  } = await connectToDatabase();\n        // fetch the posts\n        let nowa = await db.collection(\"nowa\").find({}).sort({}).toArray();\n        // return the posts\n        return res.json({\n            message: JSON.parse(JSON.stringify(nowa)),\n            success: true\n        });\n    } catch (error) {\n        // return the error\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\nasync function deleteWeing(req, res) {\n    var ObjectId = (__webpack_require__(/*! mongodb */ \"mongodb\").ObjectId);\n    const { _id  } = req.body;\n    const convertedObjectId = new ObjectId(_id);\n    try {\n        // Connecting to the database\n        let { db  } = await connectToDatabase();\n        // Deleting the post\n        await db.collection(\"nowa\").deleteOne({\n            \"_id\": convertedObjectId\n        });\n        // returning a message\n        return res.json({\n            message: \"Post deleted successfully\",\n            success: true\n        });\n    } catch (error) {\n        // returning an error\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n;\n// menambah data kedalam collection mahasiswa\nasync function addWeding(req, res) {\n    try {\n        // connect to the database\n        let { db  } = await connectToDatabase();\n        // add the post\n        await db.collection(\"nowa\").insertOne(JSON.parse(req.body));\n        // return a message\n        return res.json({\n            message: \"Data nowa Telah di Tambahkan\",\n            success: true\n        });\n    } catch (error) {\n        // return an error\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\nasync function updateMenu(req, res) {\n    const { waweding , wastudiutama , waselfstudio , waundangan , watenda , wakost , objectId  } = req.body;\n    var ObjectId = (__webpack_require__(/*! mongodb */ \"mongodb\").ObjectId);\n    const convertedObjectId = new ObjectId(objectId);\n    try {\n        // connect to the database\n        let { db  } = await connectToDatabase();\n        // update the published status of the post\n        await db.collection(\"nowa\").updateOne({\n            \"_id\": convertedObjectId\n        }, {\n            $set: {\n                \"waweding\": waweding,\n                \"wastudiutama\": wastudiutama,\n                \"waselfstudio\": waselfstudio,\n                \"waundangan\": waundangan,\n                \"watenda\": watenda,\n                \"wakost\": wakost\n            }\n        });\n        // return a message\n        return res.json({\n            message: \"Post updated successfully\",\n            success: true\n        });\n    } catch (error) {\n        // return an error\n        return res.json({\n            message: new Error(error).message,\n            success: false\n        });\n    }\n}\n// CRUD handler\nasync function handler(req, res) {\n    // switch the methods\n    switch(req.method){\n        case \"GET\":\n            {\n                return getWeing(req, res);\n            }\n        case \"POST\":\n            {\n                return addWeding(req, res);\n            }\n        case \"DELETE\":\n            {\n                return deleteWeing(req, res);\n            }\n        case \"PUT\":\n            {\n                return updateMenu(req, res);\n            }\n    }\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QUFTLENBQ25DO1lBQ0UsT0FBT1o7UUFDVCxHQUNBO1lBQ0VhLE1BQU07Z0JBQ0osWUFBWVI7Z0JBQ1osZ0JBQWdCQztnQkFDaEIsZ0JBQWdCQztnQkFDaEIsY0FBY0M7Z0JBQ2QsV0FBV0M7Z0JBQ1gsVUFBVUM7WUFDWjtRQUNGO1FBRUYsbUJBQW1CO1FBQ25CLE9BQU81QixJQUFJTyxJQUFJLENBQUM7WUFDZEMsU0FBUztZQUNUSSxTQUFTLElBQUk7UUFDZjtJQUNGLEVBQUUsT0FBT0MsT0FBTztRQUNkLGtCQUFrQjtRQUNsQixPQUFPYixJQUFJTyxJQUFJLENBQUM7WUFDZEMsU0FBUyxJQUFJTSxNQUFNRCxPQUFPTCxPQUFPO1lBQ2pDSSxTQUFTLEtBQUs7UUFDaEI7SUFDRjtBQUNGO0FBQ0EsZUFBZTtBQUNBLGVBQWVvQixRQUFRakMsR0FBRyxFQUFFQyxHQUFHLEVBQUU7SUFDOUMscUJBQXFCO0lBQ3JCLE9BQVFELElBQUlrQyxNQUFNO1FBQ2hCLEtBQUs7WUFBTztnQkFDVixPQUFPbkMsU0FBU0MsS0FBS0M7WUFDdkI7UUFDQSxLQUFLO1lBQVE7Z0JBQ1gsT0FBT29CLFVBQVVyQixLQUFLQztZQUN4QjtRQUNBLEtBQUs7WUFBVTtnQkFDYixPQUFPZSxZQUFZaEIsS0FBS0M7WUFDMUI7UUFDQSxLQUFLO1lBQU87Z0JBQ1YsT0FBT3NCLFdBQVd2QixLQUFLQztZQUN6QjtJQUNGO0FBQ0YsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Jlc2VydmFzaS8uL3BhZ2VzL2FwaS9kYl9ub3dhLmpzP2JiZjQiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgeyBjb25uZWN0VG9EYXRhYmFzZSB9ID0gcmVxdWlyZSgnLi4vLi4vbGliL21vbmdvZGInKTtcbmNvbnN0IE9iamVjdElkID0gcmVxdWlyZSgnbW9uZ29kYicpLk9iamVjdElkO1xuLy8gbWVuZ2FtYmlsIGRhdGEgZGFyaSBjb2xsZWN0aW9uIG1haGFzaXN3YVxuYXN5bmMgZnVuY3Rpb24gZ2V0V2VpbmcocmVxLCByZXMpIHtcbiAgdHJ5IHtcbiAgICAvLyBjb25uZWN0IHRvIHRoZSBkYXRhYmFzZVxuICAgIGxldCB7IGRiIH0gPSBhd2FpdCBjb25uZWN0VG9EYXRhYmFzZSgpO1xuICAgIC8vIGZldGNoIHRoZSBwb3N0c1xuICAgIGxldCBub3dhID0gYXdhaXQgZGJcbiAgICAgIC5jb2xsZWN0aW9uKCdub3dhJylcbiAgICAgIC5maW5kKHt9KVxuICAgICAgLnNvcnQoe30pXG4gICAgICAudG9BcnJheSgpO1xuICAgIC8vIHJldHVybiB0aGUgcG9zdHNcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShub3dhKSksXG4gICAgICBzdWNjZXNzOiB0cnVlLFxuICAgIH0pO1xuICB9IGNhdGNoIChlcnJvcikge1xuICAgIC8vIHJldHVybiB0aGUgZXJyb3JcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgfSk7XG4gIH1cbn1cbmFzeW5jIGZ1bmN0aW9uIGRlbGV0ZVdlaW5nKHJlcSwgcmVzKSB7XG4gIHZhciBPYmplY3RJZCA9IHJlcXVpcmUoJ21vbmdvZGInKS5PYmplY3RJZDtcbiAgY29uc3QgeyBfaWQgfSA9IHJlcS5ib2R5O1xuICBjb25zdCBjb252ZXJ0ZWRPYmplY3RJZCA9IG5ldyBPYmplY3RJZChfaWQpO1xuICB0cnkge1xuICAgIC8vIENvbm5lY3RpbmcgdG8gdGhlIGRhdGFiYXNlXG4gICAgbGV0IHsgZGIgfSA9IGF3YWl0IGNvbm5lY3RUb0RhdGFiYXNlKCk7XG4gICAgLy8gRGVsZXRpbmcgdGhlIHBvc3RcblxuICAgIGF3YWl0IGRiLmNvbGxlY3Rpb24oJ25vd2EnKS5kZWxldGVPbmUoe1xuICAgICAgJ19pZCc6IGNvbnZlcnRlZE9iamVjdElkXG4gICAgfSk7XG4gICAgLy8gcmV0dXJuaW5nIGEgbWVzc2FnZVxuICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICBtZXNzYWdlOiAnUG9zdCBkZWxldGVkIHN1Y2Nlc3NmdWxseScsXG4gICAgICBzdWNjZXNzOiB0cnVlLFxuICAgIH0pO1xuICB9IGNhdGNoIChlcnJvcikge1xuICAgIC8vIHJldHVybmluZyBhbiBlcnJvclxuICAgIHJldHVybiByZXMuanNvbih7XG4gICAgICBtZXNzYWdlOiBuZXcgRXJyb3IoZXJyb3IpLm1lc3NhZ2UsXG4gICAgICBzdWNjZXNzOiBmYWxzZSxcbiAgICB9KTtcbiAgfVxufTtcblxuLy8gbWVuYW1iYWggZGF0YSBrZWRhbGFtIGNvbGxlY3Rpb24gbWFoYXNpc3dhXG5hc3luYyBmdW5jdGlvbiBhZGRXZWRpbmcocmVxLCByZXMpIHtcbiAgdHJ5IHtcbiAgICAvLyBjb25uZWN0IHRvIHRoZSBkYXRhYmFzZVxuICAgIGxldCB7IGRiIH0gPSBhd2FpdCBjb25uZWN0VG9EYXRhYmFzZSgpO1xuICAgIC8vIGFkZCB0aGUgcG9zdFxuICAgIGF3YWl0IGRiLmNvbGxlY3Rpb24oJ25vd2EnKS5pbnNlcnRPbmUoSlNPTi5wYXJzZShyZXEuYm9keSkpO1xuICAgIC8vIHJldHVybiBhIG1lc3NhZ2VcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogJ0RhdGEgbm93YSBUZWxhaCBkaSBUYW1iYWhrYW4nLFxuICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICB9KTtcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAvLyByZXR1cm4gYW4gZXJyb3JcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgfSk7XG4gIH1cbn1cbmFzeW5jIGZ1bmN0aW9uIHVwZGF0ZU1lbnUocmVxLCByZXMpIHtcbiAgY29uc3QgeyB3YXdlZGluZyxcbiAgICB3YXN0dWRpdXRhbWEsXG4gICAgd2FzZWxmc3R1ZGlvLFxuICAgIHdhdW5kYW5nYW4sXG4gICAgd2F0ZW5kYSxcbiAgICB3YWtvc3QsXG4gICAgb2JqZWN0SWQsIH0gPSByZXEuYm9keVxuICB2YXIgT2JqZWN0SWQgPSByZXF1aXJlKCdtb25nb2RiJykuT2JqZWN0SWQ7XG4gIGNvbnN0IGNvbnZlcnRlZE9iamVjdElkID0gbmV3IE9iamVjdElkKG9iamVjdElkKTtcbiAgdHJ5IHtcbiAgICAvLyBjb25uZWN0IHRvIHRoZSBkYXRhYmFzZVxuICAgIGxldCB7IGRiIH0gPSBhd2FpdCBjb25uZWN0VG9EYXRhYmFzZSgpO1xuICAgIC8vIHVwZGF0ZSB0aGUgcHVibGlzaGVkIHN0YXR1cyBvZiB0aGUgcG9zdFxuICAgIGF3YWl0IGRiLmNvbGxlY3Rpb24oJ25vd2EnKS51cGRhdGVPbmUoXG4gICAgICB7XG4gICAgICAgICdfaWQnOiBjb252ZXJ0ZWRPYmplY3RJZFxuICAgICAgfSxcbiAgICAgIHtcbiAgICAgICAgJHNldDoge1xuICAgICAgICAgICd3YXdlZGluZyc6IHdhd2VkaW5nLFxuICAgICAgICAgICd3YXN0dWRpdXRhbWEnOiB3YXN0dWRpdXRhbWEsXG4gICAgICAgICAgJ3dhc2VsZnN0dWRpbyc6IHdhc2VsZnN0dWRpbyxcbiAgICAgICAgICAnd2F1bmRhbmdhbic6IHdhdW5kYW5nYW4sXG4gICAgICAgICAgJ3dhdGVuZGEnOiB3YXRlbmRhLFxuICAgICAgICAgICd3YWtvc3QnOiB3YWtvc3QsXG4gICAgICAgIH1cbiAgICAgIH1cbiAgICApO1xuICAgIC8vIHJldHVybiBhIG1lc3NhZ2VcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogJ1Bvc3QgdXBkYXRlZCBzdWNjZXNzZnVsbHknLFxuICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICB9KTtcbiAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAvLyByZXR1cm4gYW4gZXJyb3JcbiAgICByZXR1cm4gcmVzLmpzb24oe1xuICAgICAgbWVzc2FnZTogbmV3IEVycm9yKGVycm9yKS5tZXNzYWdlLFxuICAgICAgc3VjY2VzczogZmFsc2UsXG4gICAgfSk7XG4gIH1cbn1cbi8vIENSVUQgaGFuZGxlclxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gaGFuZGxlcihyZXEsIHJlcykge1xuICAvLyBzd2l0Y2ggdGhlIG1ldGhvZHNcbiAgc3dpdGNoIChyZXEubWV0aG9kKSB7XG4gICAgY2FzZSAnR0VUJzoge1xuICAgICAgcmV0dXJuIGdldFdlaW5nKHJlcSwgcmVzKTtcbiAgICB9XG4gICAgY2FzZSAnUE9TVCc6IHtcbiAgICAgIHJldHVybiBhZGRXZWRpbmcocmVxLCByZXMpO1xuICAgIH1cbiAgICBjYXNlICdERUxFVEUnOiB7XG4gICAgICByZXR1cm4gZGVsZXRlV2VpbmcocmVxLCByZXMpO1xuICAgIH1cbiAgICBjYXNlICdQVVQnOiB7XG4gICAgICByZXR1cm4gdXBkYXRlTWVudShyZXEsIHJlcyk7XG4gICAgfVxuICB9XG59Il0sIm5hbWVzIjpbImNvbm5lY3RUb0RhdGFiYXNlIiwicmVxdWlyZSIsIk9iamVjdElkIiwiZ2V0V2VpbmciLCJyZXEiLCJyZXMiLCJkYiIsIm5vd2EiLCJjb2xsZWN0aW9uIiwiZmluZCIsInNvcnQiLCJ0b0FycmF5IiwianNvbiIsIm1lc3NhZ2UiLCJKU09OIiwicGFyc2UiLCJzdHJpbmdpZnkiLCJzdWNjZXNzIiwiZXJyb3IiLCJFcnJvciIsImRlbGV0ZVdlaW5nIiwiX2lkIiwiYm9keSIsImNvbnZlcnRlZE9iamVjdElkIiwiZGVsZXRlT25lIiwiYWRkV2VkaW5nIiwiaW5zZXJ0T25lIiwidXBkYXRlTWVudSIsIndhd2VkaW5nIiwid2FzdHVkaXV0YW1hIiwid2FzZWxmc3R1ZGlvIiwid2F1bmRhbmdhbiIsIndhdGVuZGEiLCJ3YWtvc3QiLCJvYmplY3RJZCIsInVwZGF0ZU9uZSIsIiRzZXQiLCJoYW5kbGVyIiwibWV0aG9kIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/db_nowa.js\n");
 
 /***/ })
 
@@ -50,7 +152,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/db_nowa.js"));
+var __webpack_exports__ = __webpack_require__.X(0, [198], () => (__webpack_exec__(941)));
 module.exports = __webpack_exports__;
 
 })();
