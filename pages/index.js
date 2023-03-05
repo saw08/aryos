@@ -1,7 +1,36 @@
+import { NextSeo } from 'next-seo';
 
 export default function Home() {
   return (
     <div>
+      <NextSeo
+        title="Boking Studio Foto – Aryos Group"
+        description="fotografi studio, jasa fotografi, foto studio lebih mudah dengan aplikasi kami. boking studio foto yang anda inginkan dengan lokasi yang dekat dari rumah anda, dengan harga yang terjangkau"
+        canonical="https://infolapangan.com/"
+        openGraph={{
+          url: 'https://aryosgroup.com',
+          title: 'Boking Studio Foto – Aryos Group',
+          description:"fotografi studio, jasa fotografi,booking foto studio lebih mudah dengan aplikasi kami. boking studio foto yang anda inginkan dengan lokasi yang dekat dari rumah anda, dengan harga yang terjangkau",
+          tags: ['boking studio online', 'boking studio foto', 'studio foto terbagus', 'studio foto kekinian','studo foto terjangkau'],
+          images: [
+            {
+              url: 'https://aryosgroup.com/DEPAN-r-2.jpg',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpg',
+            },
+            { url: 'https://aryosgroup.com/STUDIO-UTAMA-KE-2.jpg' },
+            { url: 'https://aryosgroup.com/SELF-STUDIO-KE-2.jpg' },
+            { url: 'https://aryosgroup.com/UNDANGAN-DIGITAL-KE-2.jpg' },
+            { url: 'https://aryosgroup.com/ARYOS-TENDAKE-2.jpg' },
+          ],
+          siteName: 'AryosGroup',
+        }}
+      />
+      <Head>
+        <meta name="google-site-verification" content="DsqtojQvQGXlFJPmasKfDt5kY3Yo2_yZ2fxtJLuW-Ac" />
+      </Head>
       <div className='bg-black ' >
         {/* ======= Hero Section ======= */}
         {/* <section id="hero" className="d-flex align-items-center ">
