@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div>
       <NextSeo
-        title="Boking Studio Foto – Aryos Group"
-        description="fotografi studio, jasa fotografi, foto studio lebih mudah dengan aplikasi kami. boking studio foto yang anda inginkan dengan lokasi yang dekat dari rumah anda, dengan harga yang terjangkau"
+        title="Boking Studio Foto Banyuwangi– Aryos Group"
+        description="foto studio banyuwangi, jasa fotografi, foto studio murah, foto praweding banyuwang, studio foto blimbing sari"
         canonical="https://infolapangan.com/"
         openGraph={{
           url: 'https://aryosgroup.com',
           title: 'Boking Studio Foto – Aryos Group',
           description:"fotografi studio, jasa fotografi,booking foto studio lebih mudah dengan aplikasi kami. boking studio foto yang anda inginkan dengan lokasi yang dekat dari rumah anda, dengan harga yang terjangkau",
-          tags: ['boking studio online', 'boking studio foto', 'studio foto terbagus', 'studio foto kekinian','studo foto terjangkau'],
+          tags: ['boking studio online','self studio murah banyuwangi', 'sewa tenda banyuwangi','boking studio foto', 'studio foto terbagus', 'studio foto kekinian','studo foto banyuwangi'],
           images: [
             {
               url: 'https://aryosgroup.com/DEPAN-r-2.jpg',
