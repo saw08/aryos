@@ -92,7 +92,7 @@ export default function Home() {
         <div className=''><a href="/selfstudio">
           <img src="./selfstudio.jpg" className="img-fluid" alt="..." /></a>
         </div>
-        <div className=''><a href="/undangandg">
+        <div className=''><a href="https://undangankuaryos.com/undanganku/pesan-undanganku/">
           <img src="./undangan.jpg" className="img-fluid" alt="..." /></a>
         </div>
         <div className=''><a href="/tenda">
