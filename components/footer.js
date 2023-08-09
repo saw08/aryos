@@ -6,7 +6,7 @@ const Footers = () => {
         <footer id="footer">
             <div className="container ">
                 <div className="copyright">
-                    © ARYO'S GROUP  -ar- 
+                    © ARYO'S GROUP  <a href="https://onklik.biz.id/" style={{color: 'inherit',textDecoration: 'none'}}>by:OnKlik Dev<a/>
                 </div>
             </div>
         </footer>
