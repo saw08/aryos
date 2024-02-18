@@ -32,8 +32,8 @@ export default function Home() {
     } else if (error) {
         return <div>Something went wrong</div>
     }
-    let nowa = data['message']
     let pesanArr = data['message']
+    let nowa = pesanArr['menu']
     // let ruangan = pesanArr['ruangan']
     // console.log(pesanArr)
     var currentdate = new Date();
