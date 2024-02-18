@@ -107,7 +107,7 @@ export default function Home() {
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
                                 <label  >Nomor Kontak</label>
-                                <input type="text" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} placeholder="Nomor Telp." />
+                                <input type="number" className="form-control" value={noTelp} onChange={(e) => setNoTelp(e.target.value)} placeholder="Nomor Telp." />
                                 <div className="validate" />
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 text-dark">
