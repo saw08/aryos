@@ -5,6 +5,7 @@ import useSWR from 'swr'
 import Cardfoto from '../../components/admin/weding/album'
 export default function Album() {
     const [deskripsi, setDeskripsi] = useState('');
+    const [kategori, setKategori] = useState('');
     const [foto, setFoto] = useState('');
     const [image, setImage] = useState(null);
     const [createObjectURL, setCreateObjectURL] = useState(null);
@@ -38,11 +39,12 @@ export default function Album() {
         setMessage('');
         // alert("Penambahan Data Sukses")
         // fields check
-        if (!deskripsi || !foto)
+        if (!deskripsi || !foto || !kategori)
             return setError('All fields are required');
         // post structure
         let weding = {
             deskripsi,
+            kategori,
             foto
         };
         // save the post
@@ -89,6 +91,16 @@ export default function Album() {
                                 </div>
                                 <label style={{ color: "white" }}>Gambar</label>
                                 <input type="file" className="form-control" name="myImage" onChange={uploadToClient} />
+                            </div>
+                            <div className="col-lg-6 col-md-10 form-group mt-3">
+                            <div className="col-lg-6 col-md-10 form-group mt-3">
+                                <label style={{ color: "white" }}>Kategori</label>
+                                <select className="form-control form-select" onChange={(e) => setKategori(e.target.value)} required>
+                                    <option>--Pilih Kategori--</option>
+                                    <option value={'wedding'}>Wedding</option>
+                                    <option value={'prawedding'}>Prawedding</option>
+                                </select>
+                            </div>
                             </div>
                             <div className="col-lg-6 col-md-10 mt-3 form-group">
                                 <label style={{ color: "white" }}>Deskripsi album </label>
