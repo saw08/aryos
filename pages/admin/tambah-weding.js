@@ -93,14 +93,12 @@ export default function Album() {
                                 <input type="file" className="form-control" name="myImage" onChange={uploadToClient} />
                             </div>
                             <div className="col-lg-6 col-md-10 form-group mt-3">
-                            <div className="col-lg-6 col-md-10 form-group mt-3">
                                 <label style={{ color: "white" }}>Kategori</label>
                                 <select className="form-control form-select" onChange={(e) => setKategori(e.target.value)} required>
                                     <option>--Pilih Kategori--</option>
                                     <option value={'wedding'}>Wedding</option>
                                     <option value={'prawedding'}>Prawedding</option>
                                 </select>
-                            </div>
                             </div>
                             <div className="col-lg-6 col-md-10 mt-3 form-group">
                                 <label style={{ color: "white" }}>Deskripsi album </label>
