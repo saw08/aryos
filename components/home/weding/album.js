@@ -29,18 +29,9 @@ export default function Home() {
                         <></>
                     ) : (
                         <>
-                            {weding.map((data, i) => (
-                                if(data.kategori === 'wedding'){
-                                    return(
-                                        <Cardfoto props={data} />
-                                    )
-                                }
-                                else if(data.kategori === 'prawedding'){
-                                    return(
-                                        <Cardfoto props={data} />
-                                    )
-                                }
 
+                            {weding.map((data, i) => (
+                                <Cardfoto props={data} />
                             ))}
                         </>
                     )}
