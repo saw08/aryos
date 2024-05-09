@@ -32,7 +32,7 @@ export default function Home() {
                             {weding.map((data, i) => (
                                 // <Cardfoto props={data} />
                                 <>
-                                {kategori === 'wedding' 
+                                if(kategori === 'wedding'){ 
                                     (<Cardfoto props={data} />)
                                 }
                                 </>
