@@ -29,9 +29,13 @@ export default function Home() {
                         <></>
                     ) : (
                         <>
-
                             {weding.map((data, i) => (
-                                <Cardfoto props={data} />
+                                // <Cardfoto props={data} />
+                                <>
+                                {kategori === 'wedding' 
+                                    (<Cardfoto props={data} />)
+                                }
+                                </>
                             ))}
                         </>
                     )}
