@@ -27,9 +27,7 @@ export default function Home() {
             </div>
             <div className="container-fluid" data-aos="fade-up">
                 <div className="row col-lg-12">
-                    {weding.length === 0 ? (
-                        <></>
-                    ) : (
+                 
                         <>
                             {Wedding1.map((data) => (
                                <Cardfoto key={data._id} props={data} />
@@ -41,7 +39,7 @@ export default function Home() {
                                 <Cardfoto props={data} />
                             ))} */}
                         </>
-                    )}
+                   
                 </div>
             </div>
         </section>
