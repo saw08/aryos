@@ -14,8 +14,8 @@ export default function Home() {
         return <div>Something went wrong</div>
     }
 
-    const Wedding = data.filter(item => item.kategori === 'wedding');
-    const Prawedding = data.filter(item => item.kategori === 'prawedding');
+    const Wedding1 = data.filter(item => item.kategori === 'wedding');
+    const Prawedding1 = data.filter(item => item.kategori === 'prawedding');
 
     let weding = data['message']
     return (
@@ -31,11 +31,11 @@ export default function Home() {
                         <></>
                     ) : (
                         <>
-                            {Wedding.map((data) => (
-                               <Cardfoto props={data} />
+                            {Wedding1.map((data) => (
+                               <Cardfoto key={data._id} props={data} />
                             ))}
-                            {Prawedding.map((data) => (
-                               <Cardfoto props={data} />
+                            {Prawedding1.map((data) => (
+                               <Cardfoto key={data._id} props={data} />
                             ))}
                             {/* {weding.map((data, i) => (
                                 <Cardfoto props={data} />
