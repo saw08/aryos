@@ -13,11 +13,12 @@ export default function Home() {
     } else if (error) {
         return <div>Something went wrong</div>
     }
+    
+    let weding = data['message']
 
     let Wedding1 = data.filter(weding => weding.kategori === 'wedding');
     let Prawedding1 = data.filter(weding => weding.kategori === 'prawedding');
 
-    let weding = data['message']
     return (
         <section id="gallery" className="gallery">
             <div className="container" data-aos="fade-up">
