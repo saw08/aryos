@@ -14,8 +14,8 @@ export default function Home() {
         return <div>Something went wrong</div>
     }
 
-    const Wedding1 = data.filter(item => item.kategori === 'wedding');
-    const Prawedding1 = data.filter(item => item.kategori === 'prawedding');
+    const Wedding1 = data.filter(weding => weding.kategori === 'wedding');
+    const Prawedding1 = data.filter(weding => weding.kategori === 'prawedding');
 
     let weding = data['message']
     return (
