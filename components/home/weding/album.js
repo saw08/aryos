@@ -13,12 +13,9 @@ export default function Home() {
     } else if (error) {
         return <div>Something went wrong</div>
     }
-    
+
+
     let weding = data['message']
-
-    let Wedding1 = data.filter(weding => weding.kategori === 'wedding');
-    let Prawedding1 = data.filter(weding => weding.kategori === 'prawedding');
-
     return (
         <section id="gallery" className="gallery">
             <div className="container" data-aos="fade-up">
@@ -28,19 +25,16 @@ export default function Home() {
             </div>
             <div className="container-fluid" data-aos="fade-up">
                 <div className="row col-lg-12">
-                 
+                    {weding.length === 0 ? (
+                        <></>
+                    ) : (
                         <>
-                            {Wedding1.map((data) => (
-                               <Cardfoto key={data._id} props={data} />
-                            ))}
-                            {Prawedding1.map((data) => (
-                               <Cardfoto key={data._id} props={data} />
-                            ))}
-                            {/* {weding.map((data, i) => (
+
+                            {weding.map((data, i) => (
                                 <Cardfoto props={data} />
-                            ))} */}
+                            ))}
                         </>
-                   
+                    )}
                 </div>
             </div>
         </section>
