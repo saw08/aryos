@@ -1,9 +1,13 @@
 
 import Cardfoto from './cardalbum'
 import useSWR from 'swr'
+import { useEffect, useState } from 'react';
 
-
-
+async function connectToDatabase() {
+    const client = await MongoClient.connect('weding');
+    return client;
+  }
+  
 export default function Home() {
     const fetcher = (...args) => fetch(...args).then((res) => res.json())
     const { data: data, error } = useSWR('/api/db_weding', fetcher, { refreshInterval: 1000 })
@@ -14,8 +18,12 @@ export default function Home() {
         return <div>Something went wrong</div>
     }
 
+    const dataweding = await weding.findOne({ kategor:'wedding'});
+    const dataprawed = await weding.findOne({ kategor:'prawedding'});
+    setOptionData({wedding:dataweding,prawedding:dataprawed});
+    // let weding = data['message']
+    const [optionsData, setOptionsData] = useState({ option1: null, option2: null });
 
-    let weding = data['message']
     return (
         <section id="gallery" className="gallery">
             <div className="container" data-aos="fade-up">
@@ -25,7 +33,7 @@ export default function Home() {
             </div>
             <div className="container-fluid" data-aos="fade-up">
                 <div className="row col-lg-12">
-                    {weding.length === 0 ? (
+                    {/* {weding.length === 0 ? (
                         <></>
                     ) : (
                         <>
@@ -34,7 +42,14 @@ export default function Home() {
                                 <Cardfoto props={data} />
                             ))}
                         </>
+                    )} */}
+                    {weding.dataweding && (   
+                    <Cardfoto props={data} />
                     )}
+                     {/* Card untuk Opsi 2 */}
+                     {optionsData.option2 && (
+                        <Cardfoto props={data} />
+                     )}
                 </div>
             </div>
         </section>
