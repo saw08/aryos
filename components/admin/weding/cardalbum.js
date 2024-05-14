@@ -27,7 +27,7 @@ export default function Cardpesanan({ props }) {
             <div className=''>
                 <div className="profile-card-6">
                     <img src={props.foto} className="img img-fluid" height={300} width={300} style={{ objectFit: "cover" }} />
-                    <div className="profile-name">{` ${props.deskripsi}`}</div>
+                    <div className="profile-name">{` ${props.deskripsi}`}</div><br/>
                     <div className="profile-name">{` ${props.kategori}`}</div>
                 </div>
             </div>
