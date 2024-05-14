@@ -13,8 +13,8 @@ export default function Home() {
         return <div>Something went wrong</div>
     }
 
-    const dataweding = await weding.findOne({ kategor:'wedding'});
-    const dataprawed = await weding.findOne({ kategor:'prawedding'});
+    const dataweding = weding.findOne({ kategor:'wedding'});
+    const dataprawed = weding.findOne({ kategor:'prawedding'});
     setOptionData({wedding:dataweding,prawedding:dataprawed});
     // let weding = data['message']
 
