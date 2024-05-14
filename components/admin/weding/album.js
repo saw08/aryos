@@ -37,13 +37,13 @@ export default function Home() {
                             ))}
                         </>
                     )} */}
-                    {weding.dataweding && (   
+                    {weding.kategori('wedding') && (   
                         <>
                       <h2>WEDING</h2>
                     <Cardfoto props={data} /></>
                     )}
                      {/* Card untuk Opsi 2 */}
-                     {optionsData.dataprawed && (
+                     {optionsData.kategori('wedding') && (
                          <>
                          <h2>WEDING</h2>
                         <Cardfoto props={data} /></>
