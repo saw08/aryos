@@ -1,12 +1,7 @@
 
 import Cardfoto from './cardalbum'
 import useSWR from 'swr'
-import { useEffect, useState } from 'react';
 
-async function connectToDatabase() {
-    const client = await MongoClient.connect('weding');
-    return client;
-  }
   
 export default function Home() {
     const fetcher = (...args) => fetch(...args).then((res) => res.json())
@@ -22,7 +17,6 @@ export default function Home() {
     const dataprawed = await weding.findOne({ kategor:'prawedding'});
     setOptionData({wedding:dataweding,prawedding:dataprawed});
     // let weding = data['message']
-    const [optionsData, setOptionsData] = useState({ option1: null, option2: null });
 
     return (
         <section id="gallery" className="gallery">
