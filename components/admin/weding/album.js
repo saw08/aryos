@@ -2,7 +2,8 @@
 import Cardfoto from './cardalbum'
 import useSWR from 'swr'
 
-  
+
+
 export default function Home() {
     const fetcher = (...args) => fetch(...args).then((res) => res.json())
     const { data: data, error } = useSWR('/api/db_weding', fetcher, { refreshInterval: 1000 })
@@ -13,11 +14,8 @@ export default function Home() {
         return <div>Something went wrong</div>
     }
 
-    const dataweding = weding.findOne({ kategori:'wedding'});
-    const dataprawed = weding.findOne({ kategori:'prawedding'});
-    setOptionData({wedding:dataweding,prawedding:dataprawed});
-    let weding = data['message']
 
+    let weding = data['message']
     return (
         <section id="gallery" className="gallery">
             <div className="container" data-aos="fade-up">
@@ -27,7 +25,7 @@ export default function Home() {
             </div>
             <div className="container-fluid" data-aos="fade-up">
                 <div className="row col-lg-12">
-                    {/* {weding.length === 0 ? (
+                    {weding.length === 0 ? (
                         <></>
                     ) : (
                         <>
@@ -36,18 +34,7 @@ export default function Home() {
                                 <Cardfoto props={data} />
                             ))}
                         </>
-                    )} */}
-                    {weding.kategori('wedding') && (   
-                        <>
-                      <h2>WEDING</h2>
-                    <Cardfoto props={data} /></>
                     )}
-                     {/* Card untuk Opsi 2 */}
-                     {optionsData.kategori('wedding') && (
-                         <>
-                         <h2>WEDING</h2>
-                        <Cardfoto props={data} /></>
-                     )}
                 </div>
             </div>
         </section>
