@@ -16,7 +16,7 @@ export default function Home() {
     const dataweding = weding.findOne({ kategori:'wedding'});
     const dataprawed = weding.findOne({ kategori:'prawedding'});
     setOptionData({wedding:dataweding,prawedding:dataprawed});
-    // let weding = data['message']
+    let weding = data['message']
 
     return (
         <section id="gallery" className="gallery">
