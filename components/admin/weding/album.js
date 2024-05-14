@@ -44,11 +44,15 @@ export default function Home() {
                         </>
                     )} */}
                     {weding.dataweding && (   
-                    <Cardfoto props={data} />
+                        <>
+                      <h2>WEDING</h2>
+                    <Cardfoto props={data} /></>
                     )}
                      {/* Card untuk Opsi 2 */}
                      {optionsData.option2 && (
-                        <Cardfoto props={data} />
+                         <>
+                         <h2>WEDING</h2>
+                        <Cardfoto props={data} /></>
                      )}
                 </div>
             </div>
