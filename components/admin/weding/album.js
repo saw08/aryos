@@ -43,7 +43,7 @@ export default function Home() {
                     <Cardfoto props={data} /></>
                     )}
                      {/* Card untuk Opsi 2 */}
-                     {optionsData.option2 && (
+                     {optionsData.dataprawed && (
                          <>
                          <h2>WEDING</h2>
                         <Cardfoto props={data} /></>
