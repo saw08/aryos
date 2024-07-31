@@ -24,7 +24,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="container-fluid" data-aos="fade-up" data-aos-delay={100}>
-                <div className="row col-lg-12">
+                <div className="row text-center col-lg-12">
                     {tenda.length === 0 ? (
                         <></>
                     ) : (
