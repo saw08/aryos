@@ -169,9 +169,17 @@ export default function Home() {
                                 <input type="text" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} placeholder="Paket" />
                                 <div className="validate" />
                             </div>
-                            <div className="col-lg-10 col-md-10 form-group mt-3">
+                            {/* <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label  >Warna background</label>
                                 <input type="text" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} placeholder="Warna" />
+                            </div> */}
+                            <div className="col-lg-10 col-md-10 form-group mt-3">
+                                <label for="telepon" class="form-label">Pilih Sesi Foto</label>
+                                <select class="form-control" name="cars" onChange={(e) => setBegrond(e.target.value)} required>
+                                    <option disabled>-</option>
+                                    <option value={"Self Studio"}>Self Studio</option>
+                                    <option value={"Photobox Fish eye"}>Photobox Fish eye</option>
+                                </select>
                             </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label>Tambahan</label>

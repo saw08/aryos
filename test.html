@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Konsultasi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif; 
+            margin-bottom: 50px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #D4BC83;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #a38a51;
+            color: white;
+        }
+        .spasi
+        {
+            background-color: #D4BC83;
+            border-radius: 10px;
+        }
+        label{
+            text-align: justify;
+        }       
+        /* Styling the container */
+.checkbox-container {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none;
+}
+
+/* Hiding the default checkbox */
+.checkbox-container input {
+  display: none;
+}
+
+/* Custom button-style checkbox */
+.checkbox-custom {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #a38a51;
+  border-radius: 5px;
+  background-color: white;
+  color: #D4BC83;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Checkbox checked state */
+.checkbox-container input:checked + .checkbox-custom {
+  background-color: #a38a51;
+  color: white;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    </style>
+</head>
+<body>
+    
+    <div class="container  spasi mt-5">
+        <div class="card p-4 shadow">
+            <h2 class="text-center mb-4">Hubungi kami untuk info selengkapnya !</h2>
+            <form id="whatsappForm">
+                    <div  class=" mb-3">
+                        <label  class="form-label" >Nama Pemesan</label>
+                        <input type="text" id="nama"  class="form-control" placeholder="Nama"   data-msg="Please enter at least 4 chars" />
+                         
+                    </div>
+                    <div  class="mb-3 ">
+                        <label  class="form-label" >Instagram</label>
+                        <input type="text" id="insta" class="form-control"   placeholder=" Instagram" />
+                         
+                    </div>
+                    <div  class="mb-3  ">
+                        <label  class="form-label" >Nomor Kontak</label>
+                        <input type="number" id="hp" class="form-control"  placeholder="Nomor Telp." />
+                         
+                    </div>
+                    <div  class="mb-3  colour-dark">
+                        <label  class="form-label" >Tanggal Booking</label>
+                        <input type="date" id="tgl" class="form-control" />
+                          
+                    </div>
+                    <div  class="mb-3 ">
+                        <label  class="form-label" >Estimasi Jam Booking</label>
+
+                        <a  class="form-control" data-bs-toggle="collapse" href="#jam" >
+                            <icon  class='fa fa-sort-amount-desc'></icon>&nbsp;pilih jam
+                        </a>
+                        <div  class="row collapse multi-collapse text-start mt-4" id="jam">
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="08.00">
+                                        <span class="checkbox-custom">08.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="08.30">
+                                        <span class="checkbox-custom">08.30</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="09.00">
+                                        <span class="checkbox-custom">09.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="09.30">
+                                        <span class="checkbox-custom">09.30</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="10.00">
+                                        <span class="checkbox-custom">10.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="10.30">
+                                        <span class="checkbox-custom">10.30</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="11.00">
+                                        <span class="checkbox-custom">11.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="11.30">
+                                        <span class="checkbox-custom">11.30</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="12.00">
+                                        <span class="checkbox-custom">12.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="12.30">
+                                        <span class="checkbox-custom">12.30</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="13.00">
+                                        <span class="checkbox-custom">13.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="13.30">
+                                        <span class="checkbox-custom">13.30</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="jam" value="14.00">
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                                <div class="p-2">
+                                    <label class="checkbox-container" >
+                                        <input type="checkbox" class="jam" value="14.00" disabled>
+                                        <span class="checkbox-custom">14.00</span>
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+                    <div  class="mb-3 ">
+                        <label  class="form-label" >Paket Yang Dipilih</label>
+                        <input type="text" id="paket"  class="form-control"  name="paket" id="paket" placeholder="Paket" data-rule="email" data-msg="Please enter a valid email" />
+                         
+                    </div>
+                    <div className="mb-3">
+                        <label  >Warna background</label>
+                        <input type="text" className="form-control" id="bg" placeholder="Warna" />
+                    </div>
+                    <div  class="mb-3 ">
+                        <label  class="form-label">Tambahan</label>
+                        <textarea  class="form-control"  id="note"  name="message"  rows={3} placeholder="Message"  >
+                        </textarea>
+                         
+                    </div>
+                    <div  class="text-center mb-3  mt-5">
+                        <button onclick="sendToWhatsApp()" class="btn btn-custom w-100" >Boking sekarang</button>
+                    </div>
+                    </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function sendToWhatsApp() {
+            var nama = document.getElementById("nama").value;
+            var insta = document.getElementById("insta").value;
+            var hp = document.getElementById("hp").value;
+            var tgl = document.getElementById("tgl").value;
+            var paket = document.getElementById("paket").value;
+            var bg = document.getElementById("bg").value;
+            var note = document.getElementById("note").value;
+            var pilihjam = [];
+            
+            document.querySelectorAll(".jam:checked").forEach((checkbox) => {
+                pilihjam.push(checkbox.value);
+            });
+            var nomorWhatsapp = "628113717122"; 
+            var pesan = "*Hai kak ARYO'S SELF STUDIO*, saya ingin reservasi%0ANama%20%3A%20*"+ nama +
+            "*%0ANo%20hp%20%3A%20*"+ hp + 
+            "*%0AInstagram%20%3A%20*"+ insta +
+            "*%0APaket%20%3A%20*"+paket+
+            "*%0AEstimasi jam%20%3A%20*"+pilihjam.join("%0A")+
+            "*%0ATgl%20booking%20%3A%20*"+tgl+
+            "*%0ABegrond%20%3A%20*" + bg +
+            "*%0ATambahan%20%3A%20*"+note+"*%0AApakah slot tersebut tersedia?%0ATerimakasih"
+            
+            window.open(`https://wa.me/+6282257569994?text=${pesan}`, '_blank');
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
