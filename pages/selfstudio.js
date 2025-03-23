@@ -71,7 +71,7 @@ export default function Home() {
     const pesanWhatsapp = async (e) => {
         document.write("\n");
         // let text = `Hai kak ARYO'S SELF STUDIO, saya ingin reservasi%0Anama : ${nama}%0Aemail : ${email}%0ANo.hp : ${noTelp}%0ATgl : ${tglPesan}%0ABackground : ${begrond}%0Aestimasi waktu : ${jadwalPesan}%0APaket: ${paketpesan} %0A Catatan: ${catatan}%0AApakah slot tersebut tersedia?%0Aterimakasih`
-        let text = `*Hai kak ARYO'S SELF STUDIO*, saya ingin reservasi%0ANama%20%3A%20*${nama}*%0ANo%20hp%20%3A%20*${noTelp}*%0AInstagram%20%3A%20*${email}*%0ATgl%20booking%20%3A%20*${tglPesan}*%0AEstimasi%20waktu%20%3A%20*${jadwalPesan}*%0APaket%20%3A%20*${pilih}*%0ABackground%20%3A%20*${begrond}*%0ATambahan%20%3A%20*${catatan}*%0AApakah slot tersebut tersedia?%0A*Terimakasih*`
+        let text = `*Hai kak ARYO'S SELF STUDIO*, saya ingin reservasi%0ANama%20%3A%20*${nama}*%0ANo%20hp%20%3A%20*${noTelp}*%0AInstagram%20%3A%20*${email}*%0ATgl%20booking%20%3A%20*${tglPesan}*%0AEstimasi%20waktu%20%3A%20*${jadwalPesan}*%0APaket%20%3A%20*${pilih}*%0ASesi%20Foto%20%3A%20*${begrond}*%0ATambahan%20%3A%20*${catatan}*%0AApakah slot tersebut tersedia?%0A*Terimakasih*`
         let urlRed = `https://wa.me/+6282257569994?text=${text}`
         document.location.href = urlRed
     }
@@ -209,7 +209,7 @@ export default function Home() {
                                             <td><h6 className='text-black'>:<strong>{tglPesan}</strong> </h6></td>
                                     </tr>
                                     <tr>
-                                        <td><h6 className='text-black'>Background</h6></td>
+                                        <td><h6 className='text-black'>Sesi Foto</h6></td>
                                             <td><h6 className='text-black'>:<strong>{begrond}</strong> </h6></td>
                                     </tr>
                                     <tr>
