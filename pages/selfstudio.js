@@ -184,7 +184,7 @@ export default function Home() {
                             
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label>Tambahan</label>
-                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Optional (Jika ada tambahan orang atau item yang di inginkan)" defaultValue={""} />
+                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Opsional ( Jika ada penambahan orang atau item yang diinginkan )" defaultValue={""} />
                                 <div className="validate" />
                                 <hr></hr>
                             </div>
