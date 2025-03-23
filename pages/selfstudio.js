@@ -176,7 +176,7 @@ export default function Home() {
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label for="telepon" class="form-label">Pilih Sesi Foto</label>
                                 <select class="form-control" name="cars" onChange={(e) => setBegrond(e.target.value)} required>
-                                    <option disabled>-</option>
+                                    <option >-</option>
                                     <option value={"Self Studio"}>Self Studio</option>
                                     <option value={"Photobox Fish eye"}>Photobox Fish eye</option>
                                 </select>
