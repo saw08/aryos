@@ -164,6 +164,14 @@ export default function Home() {
                                 </div>
 
                             </div> */}
+                            <div className="col-lg-10 col-md-10 form-group mt-3">
+                                <label for="telepon" class="form-label">Pilih Sesi Foto</label>
+                                <select class="form-control" name="cars" onChange={(e) => setBegrond(e.target.value)} required>
+                                    <option >-</option>
+                                    <option value={"Self Studio"}>Self Studio</option>
+                                    <option value={"Photobox Fish eye"}>Photobox Fish eye</option>
+                                </select>
+                            </div>
                             <div className="col-lg-10 col-md-10 form-group mt-3 ">
                                 <label  >Paket Yang Dipilih</label>
                                 <input type="text" className="form-control" value={pilih} onChange={(e) => setPilih(e.target.value)} placeholder="Paket" />
@@ -173,17 +181,10 @@ export default function Home() {
                                 <label  >Warna background</label>
                                 <input type="text" className="form-control" value={begrond} onChange={(e) => setBegrond(e.target.value)} placeholder="Warna" />
                             </div> */}
-                            <div className="col-lg-10 col-md-10 form-group mt-3">
-                                <label for="telepon" class="form-label">Pilih Sesi Foto</label>
-                                <select class="form-control" name="cars" onChange={(e) => setBegrond(e.target.value)} required>
-                                    <option >-</option>
-                                    <option value={"Self Studio"}>Self Studio</option>
-                                    <option value={"Photobox Fish eye"}>Photobox Fish eye</option>
-                                </select>
-                            </div>
+                            
                             <div className="col-lg-10 col-md-10 form-group mt-3">
                                 <label>Tambahan</label>
-                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Tambahan" defaultValue={""} />
+                                <textarea className="form-control" name="message" value={catatan} onChange={(e) => setCatatan(e.target.value)} rows={3} placeholder="Optional (jika ada tambahan orang atau item yang di inginkan)" defaultValue={""} />
                                 <div className="validate" />
                                 <hr></hr>
                             </div>
